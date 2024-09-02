@@ -1,4 +1,6 @@
 @import "../node_modules/normalize.css/normalize.css";
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 
 *{
   margin: 0;
