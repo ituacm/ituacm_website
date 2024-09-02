@@ -1,5 +1,9 @@
 @import "../node_modules/normalize.css/normalize.css";
 
+:root {
+  --primary-color:rgb(1,130,172);
+}
+
 *{
   margin: 0;
   padding: 0;
