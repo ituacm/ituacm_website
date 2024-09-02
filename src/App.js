@@ -6,11 +6,13 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import EventsPage from "./pages/EventsPage/EventsPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 function App() {
   const router = createBrowserRouter([
     { path: "/", element: <HomePage /> },
     { path: "/events", element: <EventsPage /> },
+    { path: "/contact", element: <ContactPage /> },
   ]);
   return (
     <div className="App">
