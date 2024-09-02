@@ -1,4 +1,3 @@
-// ContactPage.js
 import React, { useRef } from 'react';
 import './ContactPage.css';
 
