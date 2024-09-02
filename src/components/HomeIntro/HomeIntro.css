@@ -1,0 +1,60 @@
+.home-intro-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+.home-intro-content{
+    width:60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home-intro-header{
+    font-size: 4rem;
+    font-family: monospace;
+    width: max-content;
+    position:relative;
+    margin-bottom: 1rem;
+}
+.home-intro-header::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    content: "|";
+    color:#000000;
+    background-color: #ffffff;
+    text-align: left;
+    animation: 
+        typewriter 2s steps(19) forwards,
+        blink 1.2s linear  infinite;
+}
+.home-intro-text{
+    font-family: monospace;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.home-intro-button-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    list-style: none;
+}
+.home-intro-join-us-button{
+    width: 8rem;
+}
+
+@keyframes typewriter{
+    to{
+        left:100%;
+    }
+}
+@keyframes blink {
+    to{
+        content:""
+    }
+}
