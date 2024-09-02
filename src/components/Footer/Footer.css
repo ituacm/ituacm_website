@@ -10,7 +10,7 @@
     color: white;
     justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
-    
+    font-size: 13px;
 }
 
 .footer-left {
@@ -19,13 +19,6 @@
     text-align: center;
     padding: 20px;
     border-right: solid 1px white;
-
-
-
-
-
-
-
 }
 
 .footer-img img {
@@ -54,11 +47,9 @@
     text-align: center;
     padding: 15px;
     flex-direction: column;
-
 }
 
 .footer-icons {
-
     height: auto;
     display: flex;
     justify-content: center;
@@ -78,6 +69,7 @@
     box-shadow: 0px 2px 0px rgb(255, 255, 255);
     font-size: 30px;
 }
+
 .footer-bottom {
     text-align: center;
     padding: 10px;
@@ -105,28 +97,22 @@
     animation: scroll-text 10s linear infinite;
 }
 
-
-
 @keyframes scroll-text {
     from {
         left: 100%;
     }
+
     to {
         left: -100%;
     }
 }
 
-
-
 @media (max-width: 900px) {
 
 
     .footer {
-
         flex-direction: column;
         font-size: 10px;
-        
-
     }
 
     .footer-img img {
@@ -155,11 +141,9 @@
     }
 
     .footer-bottom {
-        
         font-size: 8px;
-        
     }
-    
+
 
 
 
