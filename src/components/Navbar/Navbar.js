@@ -21,7 +21,6 @@ function Navbar() {
     };
     window.addEventListener('scroll', handleScroll);
   }, []);
-  console.log(isAtTop)
 
   //responsive, for mobile users there will be a hamburger-dropdown menu
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
