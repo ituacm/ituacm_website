@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import blueLogo from "./assets/ituacm-logo-blue.png";
-import whiteLogo from "./assets/ituacm-logo-white.png";
+import blueLogo from "../../assets/ituacm-logo-blue.png";
+import whiteLogo from "../../assets/ituacm-logo-white.png";
 import "./Navbar.css";
 import "../../App.css";
 import { NavLink } from "react-router-dom";

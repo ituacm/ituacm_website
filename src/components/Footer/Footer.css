@@ -3,7 +3,7 @@
     align-items: center;
     width: 100%;
     height: auto;
-    background: #0055A4;
+    background: var(--primary-color);
 
     padding: 20px;
     box-sizing: border-box;
