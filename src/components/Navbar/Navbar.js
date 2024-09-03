@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
-import blueLogo from './assets/ituacm-logo-blue.png'
-import whiteLogo from './assets/ituacm-logo-white.png';
-import './Navbar.css'
-import '../../App.css'
+import blueLogo from "../../assets/ituacm-logo-blue.png";
+import whiteLogo from "../../assets/ituacm-logo-white.png";
+import "./Navbar.css";
+import "../../App.css";
 import { NavLink } from "react-router-dom";
-import { AiFillInstagram, AiFillYoutube, AiFillLinkedin, AiFillTwitterCircle, AiFillGithub } from "react-icons/ai";
-
+import {
+  AiFillInstagram,
+  AiFillYoutube,
+  AiFillLinkedin,
+  AiFillTwitterCircle,
+  AiFillGithub,
+} from "react-icons/ai";
 
 function Navbar() {
   // this is for position:fixed navbar
@@ -21,7 +26,7 @@ function Navbar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
   }, []);
 
   //dropdown menu
@@ -34,23 +39,33 @@ function Navbar() {
         windowWidth > 768 ?
           <>
             <div className="navbar-link-container">
-              <NavLink to='/'>
-                {/* <img className={isAtTop ? 'logo' : 'logo no-display'} src={blueLogo} /> */}
-                <img className={'logo'} src={whiteLogo} />
-              </NavLink>
-
-              <NavLink to="/" className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'} > Home</NavLink>
+              <NavLink to="/" className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'} >Home</NavLink>
               <NavLink to='/about' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>About</NavLink>
               <NavLink to='/events' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Events</NavLink>
               <NavLink to='/contact' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Contact</NavLink>
             </div>
 
             <div className="navbar-icon-container">
-              <a className='navbar-icon-anchor' href='https://www.instagram.com/ituacmsc' target="_blank">
-                <AiFillInstagram className='navbar-icon' />
+              <a href="https://www.instagram.com/ituacm" target="_blank">
+                <AiFillInstagram className="navbar-icon" />
               </a>
-              <a className='navbar-icon-anchor' href='https://www.youtube.com/channel/UCCjjmsgFh5lRWhwoRH6p3tA' target="_blank">
-                <AiFillYoutube className='navbar-icon' />
+              <a
+                href="https://www.youtube.com/channel/UCCjjmsgFh5lRWhwoRH6p3tA"
+                target="_blank"
+              >
+                <AiFillYoutube className="navbar-icon" />
+              </a>
+              <a
+                href="https://tr.linkedin.com/company/ituacmsc"
+                target="_blank"
+              >
+                <AiFillLinkedin className="navbar-icon" />
+              </a>
+              <a href="https://x.com/ituacmsc" target="_blank">
+                <AiFillTwitterCircle className="navbar-icon" />
+              </a>
+              <a href="https://github.com/ituacm" target="_blank">
+                <AiFillGithub className="navbar-icon" />
               </a>
             </div>
           </>
@@ -87,8 +102,7 @@ function Navbar() {
           </>
       }
     </div>
-  )
+  );
 }
-
 
 export default Navbar;

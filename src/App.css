@@ -1,7 +1,9 @@
 @import "../node_modules/normalize.css/normalize.css";
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 
 :root {
-  --primary-color:rgb(1,130,172);
+  --primary-color:#0085ca;
 }
 
 *{
