@@ -13,46 +13,46 @@ import {
 } from "react-icons/ai";
 
 function Navbar() {
-  // this is for position:fixed navbar
-  // const [isAtTop, setIsAtTop] = useState(true);
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setIsAtTop(window.scrollY === 0);
-  //   };
-  //   window.addEventListener('scroll', handleScroll);
-  // }, []);
+  // this is for position:fixed navbar. if window.scrollY===0, there will be different styling
+  const [isAtTop, setIsAtTop] = useState(true);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY === 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+  }, []);
+  console.log(isAtTop)
 
-  //responsive
+  //responsive, for mobile users there will be a hamburger-dropdown menu
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
   }, []);
 
-  //dropdown menu
+  //dropdown menu state
   const [dropdown, setDropdown] = useState(false)
 
 
   return (
-    <div className="navbar-container">
+    <div className={isAtTop ? "navbar-container" : "navbar-container navbar-scroll"}>
       {
         windowWidth > 768 ?
-          <>
-            <img className={'logo'} src={whiteLogo} />
+          <div className="navbar">
+            <img className='logo' src={isAtTop ? whiteLogo : blueLogo} />
             <div className="navbar-link-container">
               <NavLink to="/" className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'} >Home</NavLink>
               <NavLink to='/about' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>About</NavLink>
               <NavLink to='/events' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Events</NavLink>
               <NavLink to='/contact' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Contact</NavLink>
             </div>
-          </>
-
+          </div >
+          //above is html for computer users
           :
-
+          //below is html for mobile users
           <>
-            <img className={'logo'} src={whiteLogo} />
+            <img className='logo' src={isAtTop ? whiteLogo : blueLogo} />
             <div className="navbar-drowpdown">
-
               <div onClick={() => { setDropdown(dropdown => !dropdown) }} className={dropdown ? "toggle toggle-active" : 'toggle'}>
                 <span className="top_line common"></span>
                 <span className="middle_line common"></span>
