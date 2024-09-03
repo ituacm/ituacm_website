@@ -9,6 +9,7 @@ import EventsPage from "./pages/EventsPage/EventsPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 
+
 function App() {
   const router = createBrowserRouter([
     { path: "/", element: <HomePage /> },
