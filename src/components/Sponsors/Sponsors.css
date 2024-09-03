@@ -11,16 +11,27 @@
 
 
 
+<<<<<<< HEAD
 .logos {
     overflow: hidden;
     padding: 60px 0;
+=======
+.sponsors-container{
+    overflow: hidden;
+    padding: 30px 0;
+>>>>>>> bf6b3be5fec27bc3c977dd4890ebe753a25b9f4d
     background:  #002f6c;
     white-space: nowrap;
     position: relative;
     border-bottom: white solid 1px;
 }
+<<<<<<< HEAD
 .logos:before,
 .logos:after {
+=======
+.sponsors-container:before,
+.sponsors-container:after {
+>>>>>>> bf6b3be5fec27bc3c977dd4890ebe753a25b9f4d
   position: absolute;
   top: 0;
   width: 50px;
@@ -29,12 +40,20 @@
   z-index: 2;
 }
 
+<<<<<<< HEAD
 .logos:before {
+=======
+.sponsors-container:before {
+>>>>>>> bf6b3be5fec27bc3c977dd4890ebe753a25b9f4d
   left: 0;
   background: linear-gradient(to left, rgba(255, 255, 255, 0),  #002f6c);
 }
 
+<<<<<<< HEAD
 .logos:after {
+=======
+.sponsors-container:after {
+>>>>>>> bf6b3be5fec27bc3c977dd4890ebe753a25b9f4d
   right: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 0),  #002f6c);
 }
