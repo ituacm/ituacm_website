@@ -32,15 +32,6 @@
     border-bottom: white solid 1px;
 }
 
-.logos:before,
-.logos:after {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-}
 
 .logos-slide {
     display: inline-block;
