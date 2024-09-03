@@ -1,0 +1,67 @@
+
+
+.board-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    border-radius: 16px;
+   transition: all 0.2s ease;
+   width: 18rem ;
+}
+
+
+.board-member img {
+    width: 18rem;
+    height: 20rem;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    
+}
+
+.board-member-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem;
+    min-height: 5rem;
+}
+
+.board-member-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.board-member-role {
+    opacity: 0.5    ;
+    
+}
+
+.board-member-social {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center
+}
+
+.board-member-social a {
+    text-decoration: none;
+}
+
+.board-member-icon {
+    color: rgb(0, 0, 0, 0.5);
+    transition: all 0.1s ease-in-out;
+}
+
+.board-member-icon:hover {
+    transform: scale(1.2);
+    color: black;
+}
+
+
+.board-member:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
