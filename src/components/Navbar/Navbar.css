@@ -1,13 +1,8 @@
 
 .navbar-container {
     background-color: var(--primary-color);
-<<<<<<< HEAD
     height: 6rem;
     max-width: 100vw;
-=======
-    height: 5rem;
-    width: 100%;
->>>>>>> 703f8a3fb77b7872528b7c73ba60ca6caec919ef
     display: flex;
     align-items: center;
     justify-content: space-between;

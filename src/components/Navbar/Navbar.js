@@ -38,35 +38,12 @@ function Navbar() {
       {
         windowWidth > 768 ?
           <>
+            <img className={'logo'} src={whiteLogo} />
             <div className="navbar-link-container">
               <NavLink to="/" className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'} >Home</NavLink>
               <NavLink to='/about' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>About</NavLink>
               <NavLink to='/events' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Events</NavLink>
               <NavLink to='/contact' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Contact</NavLink>
-            </div>
-
-            <div className="navbar-icon-container">
-              <a href="https://www.instagram.com/ituacm" target="_blank">
-                <AiFillInstagram className="navbar-icon" />
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UCCjjmsgFh5lRWhwoRH6p3tA"
-                target="_blank"
-              >
-                <AiFillYoutube className="navbar-icon" />
-              </a>
-              <a
-                href="https://tr.linkedin.com/company/ituacmsc"
-                target="_blank"
-              >
-                <AiFillLinkedin className="navbar-icon" />
-              </a>
-              <a href="https://x.com/ituacmsc" target="_blank">
-                <AiFillTwitterCircle className="navbar-icon" />
-              </a>
-              <a href="https://github.com/ituacm" target="_blank">
-                <AiFillGithub className="navbar-icon" />
-              </a>
             </div>
           </>
 
