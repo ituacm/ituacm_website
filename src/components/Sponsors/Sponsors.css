@@ -11,16 +11,16 @@
 
 
 
-.logos {
+.sponsors-container{
     overflow: hidden;
-    padding: 60px 0;
+    padding: 30px 0;
     background:  #002f6c;
     white-space: nowrap;
     position: relative;
     border-bottom: white solid 1px;
 }
-.logos:before,
-.logos:after {
+.sponsors-container:before,
+.sponsors-container:after {
   position: absolute;
   top: 0;
   width: 50px;
@@ -29,12 +29,12 @@
   z-index: 2;
 }
 
-.logos:before {
+.sponsors-container:before {
   left: 0;
   background: linear-gradient(to left, rgba(255, 255, 255, 0),  #002f6c);
 }
 
-.logos:after {
+.sponsors-container:after {
   right: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 0),  #002f6c);
 }
