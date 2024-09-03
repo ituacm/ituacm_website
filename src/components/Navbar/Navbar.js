@@ -17,10 +17,6 @@ function Navbar() {
   //   window.addEventListener('scroll', handleScroll);
   // }, []);
 
-
-
-
-
   //responsive
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -30,21 +26,10 @@ function Navbar() {
 
   //dropdown menu
   const [dropdown, setDropdown] = useState(false)
-  console.log(dropdown)
-
-
-  //active navbar link styling
-  const activeStyles = {
-    fontWeight: "bold",
-    textDecoration: "underline",
-    fontSize: windowWidth > 768 ? '1rem' : '2.5rem'
-  };
-
 
 
   return (
     <div className="navbar-container">
-
       {
         windowWidth > 768 ?
           <>
@@ -54,10 +39,10 @@ function Navbar() {
                 <img className={'logo'} src={whiteLogo} />
               </NavLink>
 
-              <NavLink to="/" className='navbar-link' style={({ isActive }) => isActive ? activeStyles : null}> Home</NavLink>
-              <NavLink to='/about' className='navbar-link' style={({ isActive }) => isActive ? activeStyles : null}>About</NavLink>
-              <NavLink to="/events" className='navbar-link' style={({ isActive }) => isActive ? activeStyles : null}>Events</NavLink>
-              <NavLink to='contact' className='navbar-link' style={({ isActive }) => isActive ? activeStyles : null}>Contact</NavLink>
+              <NavLink to="/" className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'} > Home</NavLink>
+              <NavLink to='/about' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>About</NavLink>
+              <NavLink to='/events' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Events</NavLink>
+              <NavLink to='/contact' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Contact</NavLink>
             </div>
 
             <div className="navbar-icon-container">
@@ -75,8 +60,8 @@ function Navbar() {
           <>
             <img className={'logo'} src={whiteLogo} />
             <div className="navbar-drowpdown">
-              <input type="checkbox" checked={dropdown} />
-              <div onClick={() => { setDropdown(dropdown => !dropdown) }} className="toggle">
+
+              <div onClick={() => { setDropdown(dropdown => !dropdown) }} className={dropdown ? "toggle toggle-active" : 'toggle'}>
                 <span className="top_line common"></span>
                 <span className="middle_line common"></span>
                 <span className="bottom_line common"></span>
@@ -84,15 +69,13 @@ function Navbar() {
             </div>
 
 
-            <input type="checkbox" checked={dropdown} />
-            <div className="navbar-dropdown-menu">
+            <div className={dropdown ? 'navbar-dropdown-menu dropdown-active' : 'navbar-dropdown-menu'}>
               <div className="navbar-link-container">
-                <NavLink to="/" className='navbar-link' style={({ isActive }) => isActive ? activeStyles : null}> Home</NavLink>
-                <NavLink to='/about' className='navbar-link' style={({ isActive }) => isActive ? activeStyles : null}>About</NavLink>
-                <NavLink to="/events" className='navbar-link' style={({ isActive }) => isActive ? activeStyles : null}>Events</NavLink>
-                <NavLink to='contact' className='navbar-link' style={({ isActive }) => isActive ? activeStyles : null}>Contact</NavLink>
+                <NavLink to="/" className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}> Home</NavLink>
+                <NavLink to='/about' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>About</NavLink>
+                <NavLink to='/events' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Events</NavLink>
+                <NavLink to='/contact' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Contact</NavLink>
               </div>
-
               <div className="navbar-icon-container">
                 <a href="https://www.instagram.com/ituacm" target='_blank'><AiFillInstagram className='navbar-icon' /></a>
                 <a href='https://www.youtube.com/channel/UCCjjmsgFh5lRWhwoRH6p3tA' target='_blank'><AiFillYoutube className='navbar-icon' /></a>
@@ -100,13 +83,9 @@ function Navbar() {
                 <a href='https://x.com/ituacmsc' target='_blank'><AiFillTwitterCircle className='navbar-icon' /></a>
                 <a href='https://github.com/ituacm' target='_blank'><AiFillGithub className='navbar-icon' /></a>
               </div>
-
             </div>
-
           </>
-
       }
-
     </div>
   )
 }
