@@ -1,12 +1,12 @@
 
 .navbar-container {
-    background-color: var(--primary-color);
-    height: 6rem;
+    background-color: white;
+    height: 5rem;
     max-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
     overflow-x: hidden; 
     position: fixed;
     top: 0;
@@ -24,12 +24,13 @@
 }
 
 .navbar-scroll {
-    background: white;
+    background: var(--primary-color) ;;
     transition: all 0.3s ease;
+    box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .navbar-scroll .navbar-link {
-    color: var(--primary-color) ;
+    color: white; 
     transition: all 0.3s ease;
 }
 
@@ -52,16 +53,12 @@
 
 .navbar-link{
     text-decoration: none;
-    color: white;
+    color: var(--primary-color) ;;
     font-size: 1rem;
     font-weight: 600;
     transition: all 0.2s;
 }
-.active {
-    font-weight: bold;
-    text-decoration: underline;
-    font-size: 1.2rem;
-}
+
 .navbar-link:hover{
     transform: scale(1.2);
 }
@@ -112,7 +109,7 @@
     }
 
     .toggle .common {
-        background-color: white;
+        background-color: var(--primary-color);
         height: 2px;
         width: 20px;
         position: absolute;
@@ -120,7 +117,7 @@
     }
 
     .navbar-scroll .toggle .common {
-        background-color: var(--primary-color);
+        background-color:white;
     }
 
     .toggle .top_line {
@@ -154,7 +151,7 @@
     .navbar-dropdown-menu {
         /* animation stuff */
         position:fixed;
-        top: 6rem;
+        top: 5rem;
         transform: translateX(100vw);
         height: calc(100vh - 5rem);
         max-width: 100vw;
@@ -193,9 +190,7 @@
         display:flex;
         transform: translateX(0vw);
     }
-    .active {
-        font-size: 2.4rem;
-    }
+
     
 
   }

@@ -35,23 +35,23 @@ function Navbar() {
 
 
   return (
-    <div className={isAtTop ? "navbar-container" : "navbar-container navbar-scroll"}>
+    <div className={isAtTop ? "navbar-container  " : "navbar-container navbar-scroll"}>
       {
         windowWidth > 768 ?
           <div className="navbar">
-            <img className='logo' src={isAtTop ? whiteLogo : blueLogo} />
+            <img className='logo' src={isAtTop ? blueLogo : whiteLogo} />
             <div className="navbar-link-container">
-              <NavLink to="/" className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'} >Home</NavLink>
-              <NavLink to='/about' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>About</NavLink>
-              <NavLink to='/events' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Events</NavLink>
-              <NavLink to='/contact' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Contact</NavLink>
+              <NavLink to="/" className='navbar-link' >Home</NavLink>
+              <NavLink to='/about' className='navbar-link'>About</NavLink>
+              <NavLink to='/events' className='navbar-link'>Events</NavLink>
+              <NavLink to='/contact' className='navbar-link'>Contact</NavLink>
             </div>
           </div >
           //above is html for computer users
           :
           //below is html for mobile users
           <>
-            <img className='logo' src={isAtTop ? whiteLogo : blueLogo} />
+            <img className='logo' src={isAtTop ? blueLogo : whiteLogo} />
             <div className="navbar-drowpdown">
               <div onClick={() => { setDropdown(dropdown => !dropdown) }} className={dropdown ? "toggle toggle-active" : 'toggle'}>
                 <span className="top_line common"></span>
@@ -63,10 +63,10 @@ function Navbar() {
 
             <div className={dropdown ? 'navbar-dropdown-menu dropdown-active' : 'navbar-dropdown-menu'}>
               <div className="navbar-link-container">
-                <NavLink to="/" className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}> Home</NavLink>
-                <NavLink to='/about' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>About</NavLink>
-                <NavLink to='/events' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Events</NavLink>
-                <NavLink to='/contact' className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}>Contact</NavLink>
+                <NavLink to="/" className='navbar-link'> Home</NavLink>
+                <NavLink to='/about' className='navbar-link'>About</NavLink>
+                <NavLink to='/events' className='navbar-link'>Events</NavLink>
+                <NavLink to='/contact' className='navbar-link'>Contact</NavLink>
               </div>
               <div className="navbar-icon-container">
                 <a href="https://www.instagram.com/ituacm" target='_blank'><AiFillInstagram className='navbar-icon' /></a>
