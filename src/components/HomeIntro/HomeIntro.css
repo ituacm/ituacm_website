@@ -1,4 +1,5 @@
 .home-intro-container{
+    padding-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,6 +47,16 @@
 }
 .home-intro-join-us-button{
     width: 8rem;
+}
+.home-intro-links{
+    padding-top: 1rem;
+    display: flex;
+    list-style: none;
+    gap:1rem;
+}
+.home-intro-link-icon{
+    font-size: 2rem;
+    color: var(--accent-color);
 }
 
 @keyframes typewriter{
