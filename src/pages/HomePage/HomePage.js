@@ -10,6 +10,7 @@ function HomePage() {
       <Navbar />
       <HomeIntro />
       <Sponsors/>
+    
       
 
       <Footer />
