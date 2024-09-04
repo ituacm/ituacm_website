@@ -26,7 +26,6 @@ function AboutPage() {
 
       <AboutACM />
       <Board boardData={data} />
-
     </div>
   );
 }
