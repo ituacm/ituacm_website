@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import { useLoaderData } from "react-router-dom";
 import BoardMember from "../../components/BoardMember/BoardMember";
+import AboutACM from "../../components/AboutACM/AboutACM";
 
 export async function loader() {
   const url =
@@ -24,6 +25,7 @@ function AboutPage() {
     <div className="about-page-container">
       <Navbar />
       <div className="about-container">
+        <AboutACM />
         <div className="about-board-container">
           <span className="about-board-container-title">Our Board</span>
           <div className="about-board-row first-row">
