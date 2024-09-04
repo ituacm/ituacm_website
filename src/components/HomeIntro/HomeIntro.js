@@ -1,6 +1,11 @@
 import React from "react";
 import "./HomeIntro.css";
 import { Link } from "react-router-dom";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 function HomeIntro() {
   return (
@@ -26,6 +31,33 @@ function HomeIntro() {
             <button className="primary-button home-intro-join-us-button">
               Contact Us
             </button>
+          </li>
+        </ul>
+        <ul className="home-intro-links">
+          <li className="home-intro-link">
+            <a href="/">
+              <FaInstagram className="home-intro-link-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <FaYoutube className="home-intro-link-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <FaGithub className="home-intro-link-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <FaLinkedin className="home-intro-link-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <FaXTwitter className="home-intro-link-icon" />
+            </a>
           </li>
         </ul>
       </div>
