@@ -3,12 +3,12 @@ import '../Stats/Stats.css'
 
 function Stats() {
   return (
-    <div className='card-container'>
-    <div class="card">
-        <div class="card-header">
+    <div className='stats-container'>
+    <div class="stats">
+        <div class="stats-header">
             <h2>Stats</h2>
         </div>
-        <div class="card-content">
+        <div class="stats-content">
             <div class="stat-item">
                 <div class="stat-icon">👥</div>
                 <div class="stat-text">

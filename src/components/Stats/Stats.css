@@ -1,6 +1,6 @@
 
 
-.card-container {
+.stats-container {
     margin: 20px;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -11,7 +11,7 @@
     
 }
 
-.card {
+.stats {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -21,19 +21,19 @@
     
 }
 
-.card-header {
+.stats-header {
     background: #0085ca;
     color: #ffffff;
     padding: 20px;
 }
 
-.card-header h2 {
+.stats-header h2 {
     margin: 0;
     font-size: 2em;
     text-align: center;
 }
 
-.card-content {
+.stats-content {
     padding: 20px;
     display: flex;
     justify-content: space-around;
@@ -69,7 +69,7 @@
     color: #333333;
 }
 @media (max-width: 900px) {
-    .card {
+    .stats {
         
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         
