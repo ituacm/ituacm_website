@@ -42,8 +42,11 @@
 
 .logos-slide {
     display: inline-block;
-    animation: 18s slide infinite linear;
+    animation: 20s slide infinite linear;
+    margin: 5px;
 }
+
+
 
 .logos-slide img {
     height: 100px;
@@ -52,12 +55,12 @@
 }
 
 
+
 .logos-slide img:hover {
-    transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(2deg);
 
 
 }
-
 @media (max-width: 900px) {
     .logos-slide img {
         height: 50px;
