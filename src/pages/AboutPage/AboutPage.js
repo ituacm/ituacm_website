@@ -23,10 +23,9 @@ function AboutPage() {
 
   return (
     <div className="about-page-container">
-      <Navbar />
+
       <AboutACM />
       <Board boardData={data} />
-      <Footer />
     </div>
   );
 }

@@ -8,13 +8,9 @@ import Stats from "../../components/Stats/Stats";
 function HomePage() {
   return (
     <div className="home-page-containers">
-      <Navbar />
       <HomeIntro />
-      <Sponsors/>
-      
-      <Stats/>
-      <Footer />
-      
+      <Sponsors />
+      <Stats />
     </div>
   );
 }
