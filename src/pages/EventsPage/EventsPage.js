@@ -11,9 +11,7 @@ function EventsPage() {
 
   return (
     <div className="events-page-container">
-      <Navbar />
       <EventCalendar events={events} />
-      <Footer />
     </div>
   );
 }
