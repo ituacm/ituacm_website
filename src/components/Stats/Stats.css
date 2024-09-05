@@ -60,25 +60,39 @@
 
 @media (max-width: 1100px) {
     .stats {
-        width: 90%;
+        width: 95%;
+    }
+    .stat {
+        width: 100%;
+        align-items: center;
+       
+       
     }
     .stat-detail{ font-size: 1.2rem;}
+    .stat-icon svg {
+        width: 25px; 
+        height: 25px; 
+    }
     
 
 }
 
 @media (max-width: 700px) {
     .stats {
-        width: 80%;
+        width: 90%;
         
         align-items: center;
     }
     
     .stat {
-        width: 90%;
+        width: 100%;
         align-items: center;
        
        
+    }
+    .stat-icon svg {
+        width: 20px; 
+        height: 20px; 
     }
     .stat-detail{ font-size: 0.8rem;}
 }
