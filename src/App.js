@@ -9,18 +9,21 @@ import EventsPage from "./pages/EventsPage/EventsPage";
 import AboutPage, { loader as boardLoader } from "./pages/AboutPage/AboutPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import { eventsLoader } from "./loaders/eventsLoader";
-import Layout from './layouts/Layout'
+import Layout from "./layouts/Layout";
+import CoursesPage from "./pages/CoursesPage/CoursesPage";
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: "/",
       element: <Layout />,
       children: [
-        { path: '', element: <HomePage /> },
-        { path: 'events', element: <EventsPage />, loader: eventsLoader },
-        { path: 'contact', element: <ContactPage /> },
-        { path: 'about', element: <AboutPage />, loader: boardLoader },
+        { path: "", element: <HomePage /> },
+        { path: "events", element: <EventsPage />, loader: eventsLoader },
+        { path: "contact", element: <ContactPage /> },
+        { path: "about", element: <AboutPage />, loader: boardLoader },
+        { path: "courses", element: <CoursesPage /> },
+        { path: "calendar", element: <CalendarPage /> },
       ],
     },
   ]);
