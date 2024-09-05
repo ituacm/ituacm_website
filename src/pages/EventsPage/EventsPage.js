@@ -5,15 +5,15 @@ import EventCard from "../../components/EventCard/EventCard";
 import { useLoaderData } from "react-router-dom";
 import EventCalendar from "../../components/Calendar/EventCalendar";
 import "./EventsPage.css";
+import Events from "../../components/Events/Events";
 
 function EventsPage() {
   const [events, setEvents] = useState(useLoaderData());
 
   return (
     <div className="events-page-container">
-      <Navbar />
       <EventCalendar events={events} />
-      <Footer />
+      <Events events={events} />
     </div>
   );
 }

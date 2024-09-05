@@ -3,8 +3,8 @@ import "./AboutPage.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import { useLoaderData } from "react-router-dom";
-import BoardMember from "../../components/BoardMember/BoardMember";
 import AboutACM from "../../components/AboutACM/AboutACM";
+import Board from "../../components/Board/Board";
 
 export async function loader() {
   const url =
@@ -23,23 +23,9 @@ function AboutPage() {
 
   return (
     <div className="about-page-container">
-      <Navbar />
-      <div className="about-container">
-        <AboutACM />
-        <div className="about-board-container">
-          <span className="about-board-container-title">Our Board</span>
-          <div className="about-board-row first-row">
-            <BoardMember member={data[0]} />
-            <BoardMember member={data[1]} />
-            <BoardMember member={data[2]} />
-          </div>
-          <div className="about-board-row second-row">
-            <BoardMember member={data[3]} />
-            <BoardMember member={data[4]} />
-          </div>
-        </div>
-      </div>
-      <Footer />
+
+      <AboutACM />
+      <Board boardData={data} />
     </div>
   );
 }

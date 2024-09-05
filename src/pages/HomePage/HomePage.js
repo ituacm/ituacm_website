@@ -4,17 +4,15 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import Sponsors from "../../components/Sponsors/Sponsors";
 import Stats from "../../components/Stats/Stats";
+import AboutHomePage from "../../components/AboutHomePage/AboutHomePage"
 
 function HomePage() {
   return (
     <div className="home-page-containers">
-      <Navbar />
       <HomeIntro />
-      <Sponsors/>
-      
-      <Stats/>
-      <Footer />
-      
+      <Sponsors />
+      <Stats />
+      <AboutHomePage />
     </div>
   );
 }
