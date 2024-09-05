@@ -10,6 +10,7 @@ function HomePage() {
   return (
     <div className="home-page-containers">
       <HomeIntro />
+      <Stats/>
       <Sponsors />
       <Stats />
       <AboutHomePage />
