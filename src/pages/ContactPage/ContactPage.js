@@ -7,7 +7,9 @@ import Footer from "../../components/Footer/Footer";
 function ContactPage() {
   return (
     <div className="contact-page-containers">
+      <Navbar />
       <ContactForm />
+      <Footer />
     </div>
   );
 }

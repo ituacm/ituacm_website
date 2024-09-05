@@ -16,7 +16,10 @@ const ContactForm = () => {
       console.log('Name:', nameRef.current.value);
       console.log('Email:', emailRef.current.value);
       console.log('Message:', messageRef.current.value);
-  
+
+      nameRef.current.value = '';
+      emailRef.current.value = '';
+      messageRef.current.value = '';
     };
   
     return (
