@@ -11,6 +11,7 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import { eventsLoader } from "./loaders/eventsLoader";
 import Layout from "./layouts/Layout";
 import CoursesPage from "./pages/CoursesPage/CoursesPage";
+import CalendarPage from "./pages/CalendarPage/CalendarPage";
 
 function App() {
   const router = createBrowserRouter([
