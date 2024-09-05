@@ -1,28 +1,22 @@
-import React from 'react'
-import './Board.css'
-import BoardMember from '../BoardMember/BoardMember';
-
+import React from "react";
+import "./Board.css";
+import BoardMember from "../BoardMember/BoardMember";
 
 export default function Board(props) {
+  const data = props.boardData;
 
-    const data = props.boardData;
-
-    return (
-
-        <div className="about-container">
-            <div className="about-board-container">
-                <span className="about-board-container-title">Our Board</span>
-                <div className="about-board-row first-row">
-                    <BoardMember member={data[0]} />
-                    <BoardMember member={data[1]} />
-                    <BoardMember member={data[2]} />
-                </div>
-                <div className="about-board-row second-row">
-                    <BoardMember member={data[3]} />
-                    <BoardMember member={data[4]} />
-                </div>
+  return (
+    <div className="board-container">
+      <span className="board-header">Our Board</span>
+      <div className="board">
+        {data.map((member) => {
+          return (
+            <div class="board-list-item">
+              <BoardMember member={member} />
             </div>
-        </div>
-
-    )
+          );
+        })}
+      </div>
+    </div>
+  );
 }

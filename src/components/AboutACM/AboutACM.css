@@ -32,7 +32,7 @@
     flex: 1.2;
     padding: 0 20px;
     text-align: center;
-    background-color: #080a74;
+    background-color: var(--accent-color);
   }
 
   .topright-side p {
@@ -54,7 +54,7 @@
   
   .left-part {
     flex: 0.7;
-    background-color: #080a74;
+    background-color: var(--accent-color);
   }
   
   .center-part {
@@ -64,7 +64,7 @@
   
   .right-part {
     flex: 0.7;
-    background-color: #0085ca; /* Empty space styling */
+    background-color: var(--primary-color); /* Empty space styling */
   }
   
   .header-sideways {
@@ -116,7 +116,7 @@
     justify-content: flex-start; /* Align items to the top initially */
     align-items: center; /* Center items horizontally */
     text-align: center; /* Center the text */
-    background-color: #080a74;
+    background-color: var(--accent-color);
 }
 
 .botleft-side p {
