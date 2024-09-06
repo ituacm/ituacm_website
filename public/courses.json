@@ -4,7 +4,7 @@
     "title": "Intro to Programming",
     "description": "A beginner-level course that introduces the basics of programming.",
     "content": "This course covers fundamental programming concepts including variables, loops, and functions. It is perfect for students who are new to programming.",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKtlvBRRbTYJQSnWfSZPhMqIQykOhxzNMaw&s",
+    "image": "./image.png",
     "lectures": [
       {
         "lectureNumber": 1,
@@ -37,7 +37,7 @@
     "title": "Advanced Web Development",
     "description": "A course designed for those looking to enhance their web development skills.",
     "content": "This course will cover advanced topics in web development such as responsive design, performance optimization, and server-side rendering.",
-    "image": "https://ari24.com/uploads/2022/12/63977c7fe8254.JPG",
+    "image": "./image.png",
     "lectures": [
       {
         "lectureNumber": 1,
@@ -62,6 +62,237 @@
         "subject": "Server-Side Rendering",
         "start": "2024-09-23T14:00:00Z",
         "end": "2024-09-23T16:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Data Structures",
+    "description": "A course focused on fundamental data structures.",
+    "content": "Learn about various data structures like arrays, stacks, queues, linked lists, and trees.",
+    "image": "./image.png",
+    "lectures": [
+      {
+        "lectureNumber": 1,
+        "subject": "Introduction to Data Structures",
+        "start": "2024-08-10T09:00:00Z",
+        "end": "2024-08-10T11:00:00Z"
+      },
+      {
+        "lectureNumber": 2,
+        "subject": "Arrays and Linked Lists",
+        "start": "2024-08-12T09:00:00Z",
+        "end": "2024-08-12T11:00:00Z"
+      },
+      {
+        "lectureNumber": 3,
+        "subject": "Stacks and Queues",
+        "start": "2024-08-14T09:00:00Z",
+        "end": "2024-08-14T11:00:00Z"
+      },
+      {
+        "lectureNumber": 4,
+        "subject": "Trees and Graphs",
+        "start": "2024-08-16T09:00:00Z",
+        "end": "2024-08-16T11:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Database Management Systems",
+    "description": "An advanced course on database management systems.",
+    "content": "This course covers relational databases, SQL, and NoSQL databases.",
+    "image": "./image.png",
+    "lectures": [
+      {
+        "lectureNumber": 1,
+        "subject": "Introduction to DBMS",
+        "start": "2024-07-01T11:00:00Z",
+        "end": "2024-07-01T13:00:00Z"
+      },
+      {
+        "lectureNumber": 2,
+        "subject": "Relational Databases",
+        "start": "2024-07-03T11:00:00Z",
+        "end": "2024-07-03T13:00:00Z"
+      },
+      {
+        "lectureNumber": 3,
+        "subject": "SQL Basics",
+        "start": "2024-07-05T11:00:00Z",
+        "end": "2024-07-05T13:00:00Z"
+      },
+      {
+        "lectureNumber": 4,
+        "subject": "NoSQL Databases",
+        "start": "2024-07-07T11:00:00Z",
+        "end": "2024-07-07T13:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Machine Learning",
+    "description": "An introduction to machine learning concepts and algorithms.",
+    "content": "This course covers supervised and unsupervised learning, along with neural networks and deep learning.",
+    "image": "./image.png",
+    "lectures": [
+      {
+        "lectureNumber": 1,
+        "subject": "Introduction to Machine Learning",
+        "start": "2024-09-05T10:00:00Z",
+        "end": "2024-09-05T12:00:00Z"
+      },
+      {
+        "lectureNumber": 2,
+        "subject": "Supervised Learning",
+        "start": "2024-09-07T10:00:00Z",
+        "end": "2024-09-07T12:00:00Z"
+      },
+      {
+        "lectureNumber": 3,
+        "subject": "Unsupervised Learning",
+        "start": "2024-09-09T10:00:00Z",
+        "end": "2024-09-09T12:00:00Z"
+      },
+      {
+        "lectureNumber": 4,
+        "subject": "Deep Learning",
+        "start": "2024-09-11T10:00:00Z",
+        "end": "2024-09-11T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Cybersecurity Fundamentals",
+    "description": "Learn the basics of cybersecurity and protecting systems.",
+    "content": "This course covers network security, cryptography, and vulnerability management.",
+    "image": "./image.png",
+    "lectures": [
+      {
+        "lectureNumber": 1,
+        "subject": "Introduction to Cybersecurity",
+        "start": "2024-09-13T11:00:00Z",
+        "end": "2024-09-13T13:00:00Z"
+      },
+      {
+        "lectureNumber": 2,
+        "subject": "Network Security",
+        "start": "2024-09-15T11:00:00Z",
+        "end": "2024-09-15T13:00:00Z"
+      },
+      {
+        "lectureNumber": 3,
+        "subject": "Cryptography",
+        "start": "2024-09-17T11:00:00Z",
+        "end": "2024-09-17T13:00:00Z"
+      },
+      {
+        "lectureNumber": 4,
+        "subject": "Vulnerability Management",
+        "start": "2024-09-19T11:00:00Z",
+        "end": "2024-09-19T13:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Cloud Computing",
+    "description": "Explore the world of cloud services and infrastructure.",
+    "content": "Learn about cloud platforms, service models, and deployment strategies.",
+    "image": "./image.png",
+    "lectures": [
+      {
+        "lectureNumber": 1,
+        "subject": "Introduction to Cloud Computing",
+        "start": "2024-06-01T09:00:00Z",
+        "end": "2024-06-01T11:00:00Z"
+      },
+      {
+        "lectureNumber": 2,
+        "subject": "Service Models",
+        "start": "2024-06-03T09:00:00Z",
+        "end": "2024-06-03T11:00:00Z"
+      },
+      {
+        "lectureNumber": 3,
+        "subject": "Cloud Platforms",
+        "start": "2024-06-05T09:00:00Z",
+        "end": "2024-06-05T11:00:00Z"
+      },
+      {
+        "lectureNumber": 4,
+        "subject": "Deployment Strategies",
+        "start": "2024-06-07T09:00:00Z",
+        "end": "2024-06-07T11:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "DevOps Essentials",
+    "description": "A practical guide to DevOps practices and tools.",
+    "content": "This course covers continuous integration, continuous delivery, and infrastructure as code.",
+    "image": "./image.png",
+    "lectures": [
+      {
+        "lectureNumber": 1,
+        "subject": "Introduction to DevOps",
+        "start": "2024-09-01T10:00:00Z",
+        "end": "2024-09-01T12:00:00Z"
+      },
+      {
+        "lectureNumber": 2,
+        "subject": "Continuous Integration",
+        "start": "2024-09-03T10:00:00Z",
+        "end": "2024-09-03T12:00:00Z"
+      },
+      {
+        "lectureNumber": 3,
+        "subject": "Continuous Delivery",
+        "start": "2024-09-05T10:00:00Z",
+        "end": "2024-09-05T12:00:00Z"
+      },
+      {
+        "lectureNumber": 4,
+        "subject": "Infrastructure as Code",
+        "start": "2024-09-07T10:00:00Z",
+        "end": "2024-09-07T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Artificial Intelligence",
+    "description": "Dive deep into AI and its real-world applications.",
+    "content": "This course covers natural language processing, reinforcement learning, and AI ethics.",
+    "image": "./image.png",
+    "lectures": [
+      {
+        "lectureNumber": 1,
+        "subject": "Introduction to Artificial Intelligence",
+        "start": "2024-09-25T11:00:00Z",
+        "end": "2024-09-25T13:00:00Z"
+      },
+      {
+        "lectureNumber": 2,
+        "subject": "Natural Language Processing",
+        "start": "2024-09-27T11:00:00Z",
+        "end": "2024-09-27T13:00:00Z"
+      },
+      {
+        "lectureNumber": 3,
+        "subject": "Reinforcement Learning",
+        "start": "2024-09-29T11:00:00Z",
+        "end": "2024-09-29T13:00:00Z"
+      },
+      {
+        "lectureNumber": 4,
+        "subject": "AI Ethics",
+        "start": "2024-10-01T11:00:00Z",
+        "end": "2024-10-01T13:00:00Z"
       }
     ]
   }

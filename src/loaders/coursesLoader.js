@@ -3,5 +3,14 @@ export const coursesLoader = async () => {
   if (!response.ok) {
     throw new Response("Failed to fetch events", { status: 500 });
   }
-  return response.json();
+  const data = await response.json();
+  const formattedData = data.map((course) => ({
+    ...course,
+    lectures: course.lectures.map((lecture) => ({
+      ...lecture,
+      start: new Date(lecture.start),
+      end: new Date(lecture.end),
+    })),
+  }));
+  return formattedData;
 };

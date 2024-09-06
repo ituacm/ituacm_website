@@ -1,4 +1,5 @@
 .eventcard-container{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +13,7 @@
 }
 .eventcard-detail{
     margin-top: 0.5rem;
-    width:95%;
+    width:100%;
     text-align: left;
 }
 .eventcard-title{
@@ -36,4 +37,13 @@
     font-size: 1.3rem;
     width: 1.5rem;
     align-items: center;
+}
+.eventcard-labels{
+    display: flex;
+    gap: 0.3rem;
+}
+.eventcard-time-label{
+    position: absolute;
+    top: 0.5rem;
+    right:0.5rem;
 }

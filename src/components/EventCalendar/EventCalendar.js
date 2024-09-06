@@ -12,11 +12,6 @@ const localizer = dayjsLocalizer(dayjs);
 
 function EventCalendar({ events }) {
   const [selectedEvent, setSelectedEvent] = useState(null);
-  // const formattedEvents = events.map((event) => ({
-  //   ...event,
-  //   start: new Date(event.start),
-  //   end: new Date(event.end),
-  // }));
   const handleSelectEvent = (event) => {
     setSelectedEvent(event);
     console.log(event);
