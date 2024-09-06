@@ -3,12 +3,21 @@ import "./EventCard.css";
 import { IoCalendarSharp } from "react-icons/io5";
 import { MdLocationOn } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
+import { ThisWeekLabel, TomorrowLabel, WorkshopLabel } from "../Labels/Label";
 
 function EventCard({ event }) {
   return (
     <div className="eventcard-container">
+      <div className="eventcard-time-label">
+        <TomorrowLabel />
+      </div>
       <img src={event.image} className="eventcard-image" />
       <div className="eventcard-detail">
+        <div className="eventcard-labels">
+          <TomorrowLabel />
+          <ThisWeekLabel />
+          <WorkshopLabel />
+        </div>
         <h1 className="eventcard-title">{event.title}</h1>
         <p className="eventcard-description">{event.description}</p>
         <div className="eventcard-detail-section">
