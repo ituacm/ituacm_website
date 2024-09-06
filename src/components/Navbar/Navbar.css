@@ -60,7 +60,7 @@
 }
 
 .navbar-link:hover{
-    transform: scale(1.2);
+    color: var(--accent-color);
 }
 
 .navbar-icon-container {
@@ -151,6 +151,7 @@
     .navbar-dropdown-menu {
         /* animation stuff */
         position:fixed;
+        left: 0;
         top: 5rem;
         transform: translateX(100vw);
         height: calc(100vh - 5rem);

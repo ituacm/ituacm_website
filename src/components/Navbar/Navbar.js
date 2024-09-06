@@ -28,6 +28,9 @@ function Navbar() {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
   }, []);
+  function toggleDropdown() {
+    setDropdown(prevState => !prevState);
+  }
 
   //dropdown menu state
   const [dropdown, setDropdown] = useState(false);
@@ -69,9 +72,7 @@ function Navbar() {
           <img className="logo" src={isAtTop ? blueLogo : whiteLogo} />
           <div className="navbar-drowpdown">
             <div
-              onClick={() => {
-                setDropdown((dropdown) => !dropdown);
-              }}
+              onClick={toggleDropdown}
               className={dropdown ? "toggle toggle-active" : "toggle"}
             >
               <span className="top_line common"></span>
@@ -88,17 +89,22 @@ function Navbar() {
             }
           >
             <div className="navbar-link-container">
-              <NavLink to="/" className="navbar-link">
-                {" "}
+              <NavLink to="/" className="navbar-link" onClick={toggleDropdown}>
                 Home
               </NavLink>
-              <NavLink to="/about" className="navbar-link">
-                About
-              </NavLink>
-              <NavLink to="/events" className="navbar-link">
+              <NavLink to="/events" className="navbar-link" onClick={toggleDropdown}>
                 Events
               </NavLink>
-              <NavLink to="/contact" className="navbar-link">
+              <NavLink to="/courses" className="navbar-link" onClick={toggleDropdown}>
+                Courses
+              </NavLink>
+              <NavLink to="/calendar" className="navbar-link" onClick={toggleDropdown}>
+                Calendar
+              </NavLink>
+              <NavLink to="/about" className="navbar-link" onClick={toggleDropdown}>
+                About
+              </NavLink>
+              <NavLink to="/contact" className="navbar-link" onClick={toggleDropdown}>
                 Contact
               </NavLink>
             </div>
