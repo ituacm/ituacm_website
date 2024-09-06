@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Intro to Programming",
+    "description": "A beginner-level course that introduces the basics of programming.",
+    "content": "This course covers fundamental programming concepts including variables, loops, and functions. It is perfect for students who are new to programming.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKtlvBRRbTYJQSnWfSZPhMqIQykOhxzNMaw&s",
+    "lectures": [
+      {
+        "lectureNumber": 1,
+        "subject": "Introduction to Programming",
+        "start": "2024-09-10T10:00:00Z",
+        "end": "2024-09-10T12:00:00Z"
+      },
+      {
+        "lectureNumber": 2,
+        "subject": "Variables and Data Types",
+        "start": "2024-09-12T10:00:00Z",
+        "end": "2024-09-12T12:00:00Z"
+      },
+      {
+        "lectureNumber": 3,
+        "subject": "Control Structures",
+        "start": "2024-09-14T10:00:00Z",
+        "end": "2024-09-14T12:00:00Z"
+      },
+      {
+        "lectureNumber": 4,
+        "subject": "Functions and Modularization",
+        "start": "2024-09-16T10:00:00Z",
+        "end": "2024-09-16T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Advanced Web Development",
+    "description": "A course designed for those looking to enhance their web development skills.",
+    "content": "This course will cover advanced topics in web development such as responsive design, performance optimization, and server-side rendering.",
+    "image": "https://ari24.com/uploads/2022/12/63977c7fe8254.JPG",
+    "lectures": [
+      {
+        "lectureNumber": 1,
+        "subject": "Introduction to Advanced Web Development",
+        "start": "2024-09-17T14:00:00Z",
+        "end": "2024-09-17T16:00:00Z"
+      },
+      {
+        "lectureNumber": 2,
+        "subject": "Responsive Design Techniques",
+        "start": "2024-09-19T14:00:00Z",
+        "end": "2024-09-19T16:00:00Z"
+      },
+      {
+        "lectureNumber": 3,
+        "subject": "Performance Optimization",
+        "start": "2024-09-21T14:00:00Z",
+        "end": "2024-09-21T16:00:00Z"
+      },
+      {
+        "lectureNumber": 4,
+        "subject": "Server-Side Rendering",
+        "start": "2024-09-23T14:00:00Z",
+        "end": "2024-09-23T16:00:00Z"
+      }
+    ]
+  }
+]

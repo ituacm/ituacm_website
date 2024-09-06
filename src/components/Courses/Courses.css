@@ -1,4 +1,4 @@
-.events-container{
+.courses-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,12 +6,12 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-.events{
+.courses{
     width: 90%;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
-.event{
+.course{
     display: flex;
     justify-content: center;
 }
