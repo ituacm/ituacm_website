@@ -14,10 +14,11 @@
 .sponsors-container{
     overflow: hidden;
     padding: 30px 0;
-    background:  #002f6c;
+    background:  var(--primary-color);
     white-space: nowrap;
     position: relative;
     border-bottom: white solid 1px;
+    max-width: 100%;
 }
 .sponsors-container:before,
 .sponsors-container:after {
