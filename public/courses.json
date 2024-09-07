@@ -10,25 +10,29 @@
         "lectureNumber": 1,
         "subject": "Introduction to Programming",
         "start": "2024-09-10T10:00:00Z",
-        "end": "2024-09-10T12:00:00Z"
+        "end": "2024-09-10T12:00:00Z",
+        "location": "Room 101"
       },
       {
         "lectureNumber": 2,
         "subject": "Variables and Data Types",
         "start": "2024-09-12T10:00:00Z",
-        "end": "2024-09-12T12:00:00Z"
+        "end": "2024-09-12T12:00:00Z",
+        "location": "Room 102"
       },
       {
         "lectureNumber": 3,
         "subject": "Control Structures",
         "start": "2024-09-14T10:00:00Z",
-        "end": "2024-09-14T12:00:00Z"
+        "end": "2024-09-14T12:00:00Z",
+        "location": "Room 103"
       },
       {
         "lectureNumber": 4,
         "subject": "Functions and Modularization",
         "start": "2024-09-16T10:00:00Z",
-        "end": "2024-09-16T12:00:00Z"
+        "end": "2024-09-16T12:00:00Z",
+        "location": "Room 104"
       }
     ]
   },
@@ -43,25 +47,29 @@
         "lectureNumber": 1,
         "subject": "Introduction to Advanced Web Development",
         "start": "2024-09-17T14:00:00Z",
-        "end": "2024-09-17T16:00:00Z"
+        "end": "2024-09-17T16:00:00Z",
+        "location": "Room 201"
       },
       {
         "lectureNumber": 2,
         "subject": "Responsive Design Techniques",
         "start": "2024-09-19T14:00:00Z",
-        "end": "2024-09-19T16:00:00Z"
+        "end": "2024-09-19T16:00:00Z",
+        "location": "Room 202"
       },
       {
         "lectureNumber": 3,
         "subject": "Performance Optimization",
         "start": "2024-09-21T14:00:00Z",
-        "end": "2024-09-21T16:00:00Z"
+        "end": "2024-09-21T16:00:00Z",
+        "location": "Room 203"
       },
       {
         "lectureNumber": 4,
         "subject": "Server-Side Rendering",
         "start": "2024-09-23T14:00:00Z",
-        "end": "2024-09-23T16:00:00Z"
+        "end": "2024-09-23T16:00:00Z",
+        "location": "Room 204"
       }
     ]
   },
@@ -76,25 +84,29 @@
         "lectureNumber": 1,
         "subject": "Introduction to Data Structures",
         "start": "2024-08-10T09:00:00Z",
-        "end": "2024-08-10T11:00:00Z"
+        "end": "2024-08-10T11:00:00Z",
+        "location": "Room 301"
       },
       {
         "lectureNumber": 2,
         "subject": "Arrays and Linked Lists",
         "start": "2024-08-12T09:00:00Z",
-        "end": "2024-08-12T11:00:00Z"
+        "end": "2024-08-12T11:00:00Z",
+        "location": "Room 302"
       },
       {
         "lectureNumber": 3,
         "subject": "Stacks and Queues",
         "start": "2024-08-14T09:00:00Z",
-        "end": "2024-08-14T11:00:00Z"
+        "end": "2024-08-14T11:00:00Z",
+        "location": "Room 303"
       },
       {
         "lectureNumber": 4,
         "subject": "Trees and Graphs",
         "start": "2024-08-16T09:00:00Z",
-        "end": "2024-08-16T11:00:00Z"
+        "end": "2024-08-16T11:00:00Z",
+        "location": "Room 304"
       }
     ]
   },
@@ -109,25 +121,29 @@
         "lectureNumber": 1,
         "subject": "Introduction to DBMS",
         "start": "2024-07-01T11:00:00Z",
-        "end": "2024-07-01T13:00:00Z"
+        "end": "2024-07-01T13:00:00Z",
+        "location": "Room 401"
       },
       {
         "lectureNumber": 2,
         "subject": "Relational Databases",
         "start": "2024-07-03T11:00:00Z",
-        "end": "2024-07-03T13:00:00Z"
+        "end": "2024-07-03T13:00:00Z",
+        "location": "Room 402"
       },
       {
         "lectureNumber": 3,
         "subject": "SQL Basics",
         "start": "2024-07-05T11:00:00Z",
-        "end": "2024-07-05T13:00:00Z"
+        "end": "2024-07-05T13:00:00Z",
+        "location": "Room 403"
       },
       {
         "lectureNumber": 4,
         "subject": "NoSQL Databases",
         "start": "2024-07-07T11:00:00Z",
-        "end": "2024-07-07T13:00:00Z"
+        "end": "2024-07-07T13:00:00Z",
+        "location": "Room 404"
       }
     ]
   },
@@ -142,25 +158,29 @@
         "lectureNumber": 1,
         "subject": "Introduction to Machine Learning",
         "start": "2024-09-05T10:00:00Z",
-        "end": "2024-09-05T12:00:00Z"
+        "end": "2024-09-05T12:00:00Z",
+        "location": "Room 501"
       },
       {
         "lectureNumber": 2,
         "subject": "Supervised Learning",
         "start": "2024-09-07T10:00:00Z",
-        "end": "2024-09-07T12:00:00Z"
+        "end": "2024-09-07T12:00:00Z",
+        "location": "Room 502"
       },
       {
         "lectureNumber": 3,
         "subject": "Unsupervised Learning",
         "start": "2024-09-09T10:00:00Z",
-        "end": "2024-09-09T12:00:00Z"
+        "end": "2024-09-09T12:00:00Z",
+        "location": "Room 503"
       },
       {
         "lectureNumber": 4,
         "subject": "Deep Learning",
         "start": "2024-09-11T10:00:00Z",
-        "end": "2024-09-11T12:00:00Z"
+        "end": "2024-09-11T12:00:00Z",
+        "location": "Room 504"
       }
     ]
   },
@@ -175,124 +195,29 @@
         "lectureNumber": 1,
         "subject": "Introduction to Cybersecurity",
         "start": "2024-09-13T11:00:00Z",
-        "end": "2024-09-13T13:00:00Z"
+        "end": "2024-09-13T13:00:00Z",
+        "location": "Room 601"
       },
       {
         "lectureNumber": 2,
         "subject": "Network Security",
         "start": "2024-09-15T11:00:00Z",
-        "end": "2024-09-15T13:00:00Z"
+        "end": "2024-09-15T13:00:00Z",
+        "location": "Room 602"
       },
       {
         "lectureNumber": 3,
         "subject": "Cryptography",
         "start": "2024-09-17T11:00:00Z",
-        "end": "2024-09-17T13:00:00Z"
+        "end": "2024-09-17T13:00:00Z",
+        "location": "Room 603"
       },
       {
         "lectureNumber": 4,
         "subject": "Vulnerability Management",
         "start": "2024-09-19T11:00:00Z",
-        "end": "2024-09-19T13:00:00Z"
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "title": "Cloud Computing",
-    "description": "Explore the world of cloud services and infrastructure.",
-    "content": "Learn about cloud platforms, service models, and deployment strategies.",
-    "image": "./image.png",
-    "lectures": [
-      {
-        "lectureNumber": 1,
-        "subject": "Introduction to Cloud Computing",
-        "start": "2024-06-01T09:00:00Z",
-        "end": "2024-06-01T11:00:00Z"
-      },
-      {
-        "lectureNumber": 2,
-        "subject": "Service Models",
-        "start": "2024-06-03T09:00:00Z",
-        "end": "2024-06-03T11:00:00Z"
-      },
-      {
-        "lectureNumber": 3,
-        "subject": "Cloud Platforms",
-        "start": "2024-06-05T09:00:00Z",
-        "end": "2024-06-05T11:00:00Z"
-      },
-      {
-        "lectureNumber": 4,
-        "subject": "Deployment Strategies",
-        "start": "2024-06-07T09:00:00Z",
-        "end": "2024-06-07T11:00:00Z"
-      }
-    ]
-  },
-  {
-    "id": 8,
-    "title": "DevOps Essentials",
-    "description": "A practical guide to DevOps practices and tools.",
-    "content": "This course covers continuous integration, continuous delivery, and infrastructure as code.",
-    "image": "./image.png",
-    "lectures": [
-      {
-        "lectureNumber": 1,
-        "subject": "Introduction to DevOps",
-        "start": "2024-09-01T10:00:00Z",
-        "end": "2024-09-01T12:00:00Z"
-      },
-      {
-        "lectureNumber": 2,
-        "subject": "Continuous Integration",
-        "start": "2024-09-03T10:00:00Z",
-        "end": "2024-09-03T12:00:00Z"
-      },
-      {
-        "lectureNumber": 3,
-        "subject": "Continuous Delivery",
-        "start": "2024-09-05T10:00:00Z",
-        "end": "2024-09-05T12:00:00Z"
-      },
-      {
-        "lectureNumber": 4,
-        "subject": "Infrastructure as Code",
-        "start": "2024-09-07T10:00:00Z",
-        "end": "2024-09-07T12:00:00Z"
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "title": "Artificial Intelligence",
-    "description": "Dive deep into AI and its real-world applications.",
-    "content": "This course covers natural language processing, reinforcement learning, and AI ethics.",
-    "image": "./image.png",
-    "lectures": [
-      {
-        "lectureNumber": 1,
-        "subject": "Introduction to Artificial Intelligence",
-        "start": "2024-09-25T11:00:00Z",
-        "end": "2024-09-25T13:00:00Z"
-      },
-      {
-        "lectureNumber": 2,
-        "subject": "Natural Language Processing",
-        "start": "2024-09-27T11:00:00Z",
-        "end": "2024-09-27T13:00:00Z"
-      },
-      {
-        "lectureNumber": 3,
-        "subject": "Reinforcement Learning",
-        "start": "2024-09-29T11:00:00Z",
-        "end": "2024-09-29T13:00:00Z"
-      },
-      {
-        "lectureNumber": 4,
-        "subject": "AI Ethics",
-        "start": "2024-10-01T11:00:00Z",
-        "end": "2024-10-01T13:00:00Z"
+        "end": "2024-09-19T13:00:00Z",
+        "location": "Room 604"
       }
     ]
   }

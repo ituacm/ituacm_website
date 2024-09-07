@@ -11,8 +11,6 @@ function CalendarPage() {
       ...calendarData.events,
       ...calendarData.courses.flatMap((course) => course.lectures),
     ]);
-    console.log(calendarEvents);
-    console.log(calendarData.events);
   }, [calendarData]);
   return (
     <div className="calendar-page-container">
