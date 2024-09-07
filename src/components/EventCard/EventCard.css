@@ -47,3 +47,9 @@
     top: 0.5rem;
     right:0.5rem;
 }
+
+@media (max-width: 670px) {
+    .eventcard-image {
+      height: 15rem;
+    }
+  }

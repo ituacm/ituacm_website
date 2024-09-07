@@ -13,7 +13,7 @@ function WhatsNext({ events }) {
 
     const sortedEvents = combinedEvents.sort((a, b) => a.start - b.start);
 
-    setWhatsNextEvents(sortedEvents.slice(0, 4));
+    setWhatsNextEvents(sortedEvents.slice(0, 3));
   }, [events]);
 
   return (

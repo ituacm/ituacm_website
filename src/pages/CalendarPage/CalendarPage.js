@@ -11,6 +11,7 @@ function CalendarPage() {
       ...calendarData.events,
       ...calendarData.courses.flatMap((course) => course.lectures),
     ]);
+    window.scrollTo(0, 0);
   }, [calendarData]);
   return (
     <div className="calendar-page-container">

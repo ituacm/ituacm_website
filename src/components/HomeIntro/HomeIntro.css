@@ -7,7 +7,7 @@
     height: 70vh;
 }
 .home-intro-content{
-    width:60rem;
+    width:45rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,60 +69,86 @@
         content:""
     }
 }
-@media(width<980px){
+@media(width<770px){
     .home-intro-content{
         width:40rem;
+    }
+    .home-intro-header{
+        font-size: 3.5rem;
+    }
+    .home-intro-text{
+        font-size: 1.2rem;
+        width:35rem;
+    }
+    .home-intro-join-us-button{
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+}
+@media(width<660px){
+    .home-intro-container{
+        width: 95%;
+        height: 50vh;
+    }
+    .home-intro-content{
+        width:100%;
     }
     .home-intro-header{
         font-size: 3rem;
     }
     .home-intro-text{
         font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
     .home-intro-join-us-button{
         font-size: 0.8rem;
         padding: 0.8rem;
-        width: 6.4rem;
+        width: 5.9rem;
     }
 }
-@media(width<650px){
+
+@media(width<580px){
     .home-intro-container{
-        height: 50vh;
-    }
-    .home-intro-content{
-        width:30rem;
+        height: 45vh;
     }
     .home-intro-header{
-        font-size: 2.2rem;
+        font-size: 2rem;
+        margin-bottom: 0.3rem;
     }
     .home-intro-text{
         font-size: 0.8rem;
-        margin-bottom: 1.5rem;
+        width: 70%;
+        margin-bottom: 1rem;
     }
     .home-intro-join-us-button{
         font-size: 0.7rem;
         padding: 0.7rem;
-        width: 5.6rem;
+        width: 5.5rem;
+    }
+    .home-intro-link-icon{
+        font-size: 1.6rem;
     }
 }
 
-@media(width<490px){
+@media(width<410px){
     .home-intro-container{
-        height: 40vh;
-    }
-    .home-intro-content{
-        width:20rem;
+        height: 45vh;
     }
     .home-intro-header{
-        font-size: 1.8rem;
+        font-size: 1.65rem;
+        margin-bottom: 0.3rem;
     }
     .home-intro-text{
-        font-size: 0.5rem;
+        font-size: 0.7rem;
+        width: 80%;
         margin-bottom: 1rem;
     }
     .home-intro-join-us-button{
-        font-size: 0.5rem;
-        padding: 0.5rem;
-        width: 4rem;
+        font-size: 0.6rem;
+        padding: 0.6rem;
+        width: 5.2rem;
+    }
+    .home-intro-link-icon{
+        font-size: 1.3rem;
     }
 }
