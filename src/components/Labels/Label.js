@@ -16,12 +16,15 @@ export function Label({ text = "text", color = "#0085ca" }) {
 export function TomorrowLabel() {
   return <Label text="Tomorrow" color="#ef3340" />;
 }
-
-// Diğer standart etiketler:
-export function ThisWeekLabel() {
-  return <Label text="This Week" color="#ff5722" />;
+export function TodayLabel() {
+  return <Label text="Today" color="#a8ad00" />;
 }
-
+export function ThisWeekLabel() {
+  return <Label text="This Week" color="#de7c00" />;
+}
 export function WorkshopLabel() {
-  return <Label text="Workshop" color="#4caf50" />;
+  return <Label text="Workshop" color="#a8ad00" />;
+}
+export function LongtermCourseLabel() {
+  return <Label text="Long Term Course" color="#0085ca" />;
 }

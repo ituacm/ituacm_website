@@ -28,7 +28,10 @@ function Events({ events }) {
             );
           })}
       </div>
-      <button className="primary-button" onClick={toggleShowMoreEvents}>
+      <button
+        className="primary-button events-show-button"
+        onClick={toggleShowMoreEvents}
+      >
         {showMore ? "Show Less" : "Show More"}
       </button>
     </div>

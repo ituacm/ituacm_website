@@ -4,7 +4,6 @@
     align-items: center;
     width: 100%;
     padding-top: 2rem;
-    padding-bottom: 2rem;
 }
 .events{
     width: 90%;
@@ -14,4 +13,7 @@
 .event{
     display: flex;
     justify-content: center;
+}
+.events-show-button{
+    margin:1rem;
 }
