@@ -8,7 +8,7 @@ export default function BoardMember(props) {
 
     return (
         <div className='board-member'>
-            <img src={photo} />
+            <img src={photo} alt={'notfound'} />
             <div className='board-member-info'>
                 <span className='board-member-name'>{name}</span>
                 <span className='board-member-role'>{role}</span>
@@ -16,9 +16,7 @@ export default function BoardMember(props) {
                     <a href={instagram} target='_blank'><AiFillInstagram className='board-member-icon' /></a>
                     <a href={linkedin} target='_blank'><AiFillLinkedin className='board-member-icon' /></a>
                 </div>
-
             </div>
-
         </div>
     )
 }

@@ -1,0 +1,30 @@
+.event-calendar-container{
+    width:90%;
+    padding-top: 6rem;
+    display: flex;
+    align-items: start;
+    height:35rem;
+}
+.rbc-calendar{
+    width:60%;
+}
+.rbc-month-view{
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.rbc-header{
+    background-color: #0085ca;
+    color: #ffffff;
+    font-weight: 400;
+}
+.calendar-selected-event-details{
+
+}
+.calendar-event-not-selected{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:40%;
+    height:100%;
+}
