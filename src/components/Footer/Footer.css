@@ -17,13 +17,19 @@
 }
 
 .footer-left {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     align-items: center;
     text-align: center;
     padding: 20px;
     border-right: solid 1px white;
 }
-
+.footer-img{
+    display: flex;
+    align-items: center;
+    height: 9rem;
+}
 .footer-img img {
     margin: 20px;
     width: 100px;
@@ -56,7 +62,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height:122.95px;
+    height:9rem;
 }
 
 .footer-icons {
@@ -146,9 +152,9 @@
     .footer-bottom {
         font-size: 8px;
     }
-
-
-
-
-
+}
+@media(max-width:450px){
+    .footer-icons a i {
+        font-size: 1.5rem;
+    }
 }
