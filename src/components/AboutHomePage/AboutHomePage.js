@@ -21,13 +21,13 @@ const AboutHomePage = () => {
         let startRange;
 
         if(viewHeight<=630){
-           startRange = viewHeight * 2.1; 
+           startRange = viewHeight * 1.8; 
         } 
         else if(viewHeight<=750){
-            startRange = viewHeight * 1.9; 
+            startRange = viewHeight * 1.55; 
         }
         else{
-            startRange = viewHeight * 1.45; 
+            startRange = viewHeight * 1.25; 
         }
 
         
