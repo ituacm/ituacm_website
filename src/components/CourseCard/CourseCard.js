@@ -5,6 +5,7 @@ import { IoCalendarSharp } from "react-icons/io5";
 import { FaRegClock } from "react-icons/fa";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import LectureCard from "../LectureCard/LectureCard";
+import { useNavigate } from "react-router-dom";
 
 function CourseCard({ course }) {
   // const [selectedLecture, setSelectedLecture] = useState(0);
@@ -20,8 +21,17 @@ function CourseCard({ course }) {
   //   }
   //   setSelectedLecture(selectedLecture - 1);
   // };
+
+  const navigate = useNavigate();
+  function createSearchQuery() {
+    navigate(`/courses?id=${course.id}`);
+  }
+
+
+
+  //you can move the onClick={createSearchQuery} to 'see details button if you like'
   return (
-    <div className="course-card-container">
+    <div className="course-card-container" onClick={createSearchQuery}>
       <img src={course.image} className="course-card-image" />
       <div className="course-card-right">
         <div className="course-card-content">
