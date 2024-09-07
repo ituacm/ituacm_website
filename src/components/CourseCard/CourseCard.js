@@ -7,19 +7,19 @@ import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import LectureCard from "../LectureCard/LectureCard";
 
 function CourseCard({ course }) {
-  const [selectedLecture, setSelectedLecture] = useState(0);
-  const handleNextLecture = () => {
-    if (selectedLecture == course.lectures.length - 1) {
-      return;
-    }
-    setSelectedLecture(selectedLecture + 1);
-  };
-  const handlePrevLecture = () => {
-    if (selectedLecture == 0) {
-      return;
-    }
-    setSelectedLecture(selectedLecture - 1);
-  };
+  // const [selectedLecture, setSelectedLecture] = useState(0);
+  // const handleNextLecture = () => {
+  //   if (selectedLecture == course.lectures.length - 1) {
+  //     return;
+  //   }
+  //   setSelectedLecture(selectedLecture + 1);
+  // };
+  // const handlePrevLecture = () => {
+  //   if (selectedLecture == 0) {
+  //     return;
+  //   }
+  //   setSelectedLecture(selectedLecture - 1);
+  // };
   return (
     <div className="course-card-container">
       <img src={course.image} className="course-card-image" />
@@ -48,13 +48,15 @@ function CourseCard({ course }) {
             </div>
           </div>
         </div>
-        <LectureCard
+        {/* <LectureCard
           lecture={course.lectures[selectedLecture]}
           handleNextLecture={handleNextLecture}
           handlePrevLecture={handlePrevLecture}
           lecturesCount={course.lectures.length}
-        />
-        <button className="primary-button">See details</button>
+        /> */}
+        <button className="primary-button course-card-see-details-button">
+          See details
+        </button>
       </div>
     </div>
   );
