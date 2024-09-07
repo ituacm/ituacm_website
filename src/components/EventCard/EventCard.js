@@ -3,20 +3,50 @@ import "./EventCard.css";
 import { IoCalendarSharp } from "react-icons/io5";
 import { MdLocationOn } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
-import { ThisWeekLabel, TomorrowLabel, WorkshopLabel } from "../Labels/Label";
+import {
+  LongtermCourseLabel,
+  ThisWeekLabel,
+  TodayLabel,
+  TomorrowLabel,
+  WorkshopLabel,
+} from "../Labels/Label";
 
 function EventCard({ event }) {
   return (
     <div className="eventcard-container">
       <div className="eventcard-time-label">
-        <TomorrowLabel />
+        {(() => {
+          const today = new Date();
+          today.setHours(0, 0, 0, 0); // Saat, dakika, saniye sıfırla
+          const todayTime = today.getTime(); // GetTime() kullanarak bugünün zamanını al
+
+          const eventStart = new Date(event.start); // event.start'ı bozmamak için kopyasını oluştur
+          eventStart.setHours(0, 0, 0, 0); // Saat, dakika, saniye sıfırla
+
+          const timeDifference =
+            (eventStart.getTime() - todayTime) / (1000 * 60 * 60 * 24); // Gün farkını hesapla
+
+          if (timeDifference === 0) {
+            return <TodayLabel />;
+          } else if (timeDifference === 1) {
+            return <TomorrowLabel />;
+          } else if (timeDifference < 7 && timeDifference > 1) {
+            return <ThisWeekLabel />;
+          }
+        })()}
       </div>
       <img src={event.image} className="eventcard-image" />
       <div className="eventcard-detail">
         <div className="eventcard-labels">
-          <TomorrowLabel />
-          <ThisWeekLabel />
-          <WorkshopLabel />
+          {(() => {
+            if (event.lectures) {
+              if (event.isWorkshop) {
+                return <WorkshopLabel />;
+              } else {
+                return <LongtermCourseLabel />;
+              }
+            }
+          })()}
         </div>
         <h1 className="eventcard-title">{event.title}</h1>
         <p className="eventcard-description">{event.description}</p>
