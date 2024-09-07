@@ -20,7 +20,7 @@
 }
 .course-card-content{
     height: 95%;
-    width: 25rem;
+    width: 40rem;
     padding-left: 1rem;
     text-align: left;
     display: flex;
@@ -50,4 +50,7 @@
     font-size: 1.3rem;
     width: 1.5rem;
     align-items: center;
+}
+.course-card-see-details-button{
+    margin-right: 3rem;
 }
