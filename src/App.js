@@ -15,6 +15,7 @@ import { boardMembersLoader } from "./loaders/boardMembersLoader";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import { coursesLoader } from "./loaders/coursesLoader";
 import { calendarLoader } from "./loaders/calendarLoader";
+import { homeLoader } from "./loaders/homeLoader";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,7 +23,7 @@ function App() {
       path: "/",
       element: <Layout />,
       children: [
-        { path: "", element: <HomePage /> },
+        { path: "", element: <HomePage />, loader: homeLoader },
         { path: "events", element: <EventsPage />, loader: eventsLoader },
         { path: "contact", element: <ContactPage /> },
         { path: "about", element: <AboutPage />, loader: boardMembersLoader },

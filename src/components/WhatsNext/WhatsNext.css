@@ -1,0 +1,29 @@
+.whats-next-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.whats-next{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.whats-next-header{
+    font-family: monospace;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+.whats-next-events{
+    display: flex;
+    flex-wrap: wrap;
+}
+.whats-next-event{
+    width: 25%;
+}
+.whats-next-see-more-button{
+    width: 7rem;
+    height: min-content;
+    margin:1rem
+}
