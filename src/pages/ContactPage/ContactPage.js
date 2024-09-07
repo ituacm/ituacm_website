@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContactForm from "../../components/ContactForm/ContactForm";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
 
 function ContactPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="contact-page-containers">
       <ContactForm />
