@@ -19,22 +19,19 @@ const AboutHomePage = () => {
 
 
         let startRange;
-        let endRange;
+
         if(viewHeight<=630){
-           startRange = viewHeight * 0.6; 
-           endRange = viewHeight * 1.2;
+           startRange = viewHeight * 2.1; 
         } 
         else if(viewHeight<=750){
-            startRange = viewHeight * 0.9; 
-            endRange = viewHeight * 1.3;
+            startRange = viewHeight * 1.9; 
         }
         else{
-            startRange = viewHeight * 0.7; 
-            endRange = viewHeight * 1.1;
+            startRange = viewHeight * 1.45; 
         }
 
         
-        if (scrollPosition >= startRange && scrollPosition <= endRange) {
+        if (scrollPosition >= startRange) {
         setIsBetween(true); 
       } else {
         setIsBetween(false);
