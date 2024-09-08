@@ -24,12 +24,13 @@
 }
 
 .board-member-name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
 .board-member-role {
     opacity: 0.5;
+    font-size: 18px;
 }
 
 .board-member-social {
@@ -54,13 +55,81 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .board-member {
-        width: 16rem;
+        width: 12rem;
     }
 
     .board-member img {
-        width: 18rem;
-        height: 20rem;
+        width: 12rem;
+        height: 14rem;
+    }
+
+    .board-member-icon{
+        font-size: 1.3em;
+    }
+    .board-member-name{
+        font-size: 1.3em;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .board-member {
+        width: 10rem;
+    }
+
+    .board-member img {
+        width: 10rem;
+        height: 12rem;
+    }
+    .board-member-icon{
+        font-size: 1.2em;
+    }
+    .board-member-name{
+        font-size: 1.2em;
+    }
+    .board-member-role{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 550px) {
+    .board-member {
+        width: 9rem;
+    }
+
+    .board-member img {
+        width: 9rem;
+        height: 11rem;
+    }
+    .board-member-icon{
+        font-size: 1.1em;
+    }
+    .board-member-name{
+        font-size: 1.1em;
+    } 
+    .board-member-role{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+    .board-member {
+        width: 8rem;
+    }
+
+    .board-member img {
+        width: 7.5rem;
+        height: 8.5rem;
+    }
+    .board-member-icon{
+        font-size: 0.9em;
+    }
+    .board-member-name{
+        font-size: 0.9em;
+    } 
+    .board-member-role{
+        font-size: 14px;
     }
 }
