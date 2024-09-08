@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CourseCard from "../CourseCard/CourseCard";
 import "./Courses.css";
-import Modal from '../Modal/Modal.js'
+import CourseModal from "../Modals/CourseModal/CourseModal";
 import { useSearchParams } from "react-router-dom";
 
 function Courses({ courses }) {
@@ -20,7 +20,15 @@ function Courses({ courses }) {
   };
 
   const [searchParams] = useSearchParams();
-  const modalCourse = courses.find(course => course.id.toString() === searchParams.get('id'));
+  const modalCourse = courses.find(
+    (course) => course.id.toString() === searchParams.get("id")
+  );
+
+  useEffect(() => {
+    modalCourse
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "");
+  }, [modalCourse]);
 
   return (
     <>
@@ -44,9 +52,8 @@ function Courses({ courses }) {
         ) : null}
       </div>
 
-      {modalCourse && <Modal content={modalCourse} />}
+      {modalCourse && <CourseModal course={modalCourse} />}
     </>
-
   );
 }
 

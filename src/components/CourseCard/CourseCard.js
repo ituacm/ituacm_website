@@ -27,11 +27,8 @@ function CourseCard({ course }) {
     navigate(`/courses?id=${course.id}`);
   }
 
-
-
-  //you can move the onClick={createSearchQuery} to 'see details button if you like'
   return (
-    <div className="course-card-container" onClick={createSearchQuery}>
+    <div className="course-card-container">
       <img src={course.image} className="course-card-image" />
       <div className="course-card-right">
         <div className="course-card-content">
@@ -64,7 +61,10 @@ function CourseCard({ course }) {
           handlePrevLecture={handlePrevLecture}
           lecturesCount={course.lectures.length}
         /> */}
-        <button className="primary-button course-card-see-details-button">
+        <button
+          className="primary-button course-card-see-details-button"
+          onClick={createSearchQuery}
+        >
           See details
         </button>
       </div>

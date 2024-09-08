@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Events.css";
 import EventCard from "../EventCard/EventCard";
 import { useSearchParams } from "react-router-dom";
 import Modal from "../Modal/Modal";
+import EventModal from "../Modals/EventModal/EventModal";
 
 function Events({ events }) {
   const defaultVisibleEventCount = 8;
@@ -18,7 +19,14 @@ function Events({ events }) {
   };
 
   const [searchParams] = useSearchParams();
-  const modalEvent = events.find(event => event.id.toString() === searchParams.get('id'));
+  const modalEvent = events.find(
+    (event) => event.id.toString() === searchParams.get("id")
+  );
+  useEffect(() => {
+    modalEvent
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "");
+  }, [modalEvent]);
 
   return (
     <>
@@ -43,10 +51,8 @@ function Events({ events }) {
         </button>
       </div>
 
-      {modalEvent && <Modal content={modalEvent} />}
-
+      {modalEvent && <EventModal event={modalEvent} />}
     </>
-
   );
 }
 
