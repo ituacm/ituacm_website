@@ -19,7 +19,7 @@ function HomeIntro() {
       <div className="home-intro-content">
         <h1 className="home-intro-header">
           {"W"}
-          <Typewriter words={["elcome to ITU ACM!"]} loop={1} />
+          <Typewriter words={["elcome to ITU ACM!"]} loop={1} typeSpeed={100} />
         </h1>
         <p className="home-intro-text">
           Your Place for Skill-Building Opportunities, Engaging Events, and
