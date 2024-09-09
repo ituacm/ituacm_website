@@ -38,7 +38,7 @@ function Events({ events }) {
             .map((event, index) => {
               return (
                 <div key={index} className="event">
-                  <EventCard event={event} />
+                  <EventCard event={event} page={"events"} />
                 </div>
               );
             })}
