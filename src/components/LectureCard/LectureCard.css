@@ -1,14 +1,18 @@
 .lecture-card-container{
     background-color: #f3f3f3;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     width: 20rem;
-    height: 70%;
+    height: 9rem;
+    padding: 1rem;
 }
 .lecture{
-    padding: 1rem 0;
-    width: fill;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .lecture-number{
     font-size: 1rem;

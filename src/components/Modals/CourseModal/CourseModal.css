@@ -39,7 +39,7 @@
   }
   .course-modal-photo{
       width: 100%;
-      height: 25rem;
+      height: 26rem;
       object-fit: cover;
       border-radius: 0.5rem;
   }
@@ -50,7 +50,7 @@
       flex-direction: column;
       align-items: start;
       justify-content: space-between;
-      min-height: 25rem;
+      min-height: 26rem;
   }
   .course-modal-content-right-top{
   width: 100%;
@@ -66,9 +66,15 @@
     align-items: center;
     justify-content: left;
     width: 100%;
+    height: max-content;
     overflow: scroll;
+    gap: 0.5rem;
+  }
+  .course-modal-lectures-list::-webkit-scrollbar{
+    display: none;
   }
   .course-modal-lecture{
+    height: 100%;
   }
   .course-modal-details{
       display: flex;
