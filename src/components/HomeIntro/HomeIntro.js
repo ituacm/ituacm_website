@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Typewriter, Cursor } from "react-simple-typewriter";
 import "./HomeIntro.css";
 import { Link } from "react-router-dom";
 import { FaInstagram } from "react-icons/fa";
@@ -8,13 +9,21 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 function HomeIntro() {
+  const [headerText, setHeaderText] = useState("");
+  const text = "Welcome to ITU ACM!";
+  const typingSpeed = 100;
+  let index = 0;
+
   return (
     <div className="home-intro-container">
       <div className="home-intro-content">
-        <h1 className="home-intro-header">Welcome to ITU ACM!</h1>
+        <h1 className="home-intro-header">
+          {"W"}
+          <Typewriter words={["elcome to ITU ACM!"]} loop={1} />
+        </h1>
         <p className="home-intro-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-          quisquam, rerum modi velit soluta necessitatibus.
+          Your Place for Skill-Building Opportunities, Engaging Events, and
+          Thrilling Tech Experiences
         </p>
         <ul className="home-intro-button-group">
           <li>

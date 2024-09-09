@@ -10,20 +10,18 @@ import {
   TomorrowLabel,
   WorkshopLabel,
 } from "../Labels/Label";
-import Modal from '../Modal/Modal'
+import Modal from "../Modal/Modal";
 import { useNavigate } from "react-router-dom";
 
-function EventCard({ event }) {
-
+function EventCard({ event, page }) {
   const navigate = useNavigate();
   function createSearchQuery() {
-    navigate(`/events?id=${event.id}`);
+    navigate(`/${page}?id=${event.id}`);
   }
 
   return (
-
     <>
-      <div className="eventcard-container" onClick={createSearchQuery} >
+      <div className="eventcard-container" onClick={createSearchQuery}>
         <div className="eventcard-time-label">
           {(() => {
             const today = new Date();

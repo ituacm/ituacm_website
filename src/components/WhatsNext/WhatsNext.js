@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./WhatsNext.css";
 import EventCard from "../EventCard/EventCard";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import EventModal from "../Modals/EventModal/EventModal";
 
 function WhatsNext({ events }) {
   const [whatsNextEvents, setWhatsNextEvents] = useState([]);
@@ -16,6 +17,16 @@ function WhatsNext({ events }) {
     setWhatsNextEvents(sortedEvents.slice(0, 3));
   }, [events]);
 
+  const [searchParams] = useSearchParams();
+  const modalEvent = whatsNextEvents.find(
+    (event) => event.id.toString() === searchParams.get("id")
+  );
+  useEffect(() => {
+    modalEvent
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "");
+  }, [modalEvent]);
+
   return (
     <div className="whats-next-container">
       <div className="whats-next">
@@ -24,7 +35,7 @@ function WhatsNext({ events }) {
           {whatsNextEvents.map((event, index) => {
             return (
               <div key={index} className="whats-next-event">
-                <EventCard event={event} />
+                <EventCard event={event} page={""} />
               </div>
             );
           })}
@@ -35,6 +46,7 @@ function WhatsNext({ events }) {
         >
           See all
         </Link>
+        {modalEvent && <EventModal event={modalEvent} />}
       </div>
     </div>
   );
