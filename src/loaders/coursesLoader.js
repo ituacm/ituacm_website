@@ -12,6 +12,7 @@ export const coursesLoader = async () => {
       end: new Date(lecture.end),
     })),
     start: new Date(course.lectures[0].start),
+    end: new Date(course.lectures[course.lectures.length - 1].end),
   }));
   return formattedData;
 };

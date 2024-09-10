@@ -11,7 +11,26 @@ function CoursesPage() {
   }, []);
   return (
     <div className="courses-page-container">
-      <Courses courses={courses} />
+      <Courses
+        courses={courses}
+        header="Ongoing Courses"
+        sort={(a, b) => a.start - b.start}
+        filter={(course) =>
+          new Date() > course.start && new Date() < course.end
+        }
+      />
+      <Courses
+        courses={courses}
+        header="Upcoming Courses"
+        sort={(a, b) => a.start - b.start}
+        filter={(course) => course.start > new Date()}
+      />
+      <Courses
+        courses={courses}
+        header="Past Courses"
+        sort={(a, b) => b.start - a.start}
+        filter={(course) => new Date() > course.end}
+      />
     </div>
   );
 }

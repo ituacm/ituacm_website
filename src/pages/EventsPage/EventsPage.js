@@ -10,7 +10,25 @@ function EventsPage() {
   }, []);
   return (
     <div className="events-page-container">
-      <Events events={events} />
+      <Events
+        events={events}
+        header="Ongoing Events"
+        filter={(event) => new Date() > event.start && new Date() < event.end}
+        sort={(a, b) => a.start - b.start}
+      />
+      <Events
+        events={events}
+        header="Upcoming Events"
+        filter={(event) => event.start > new Date()}
+        sort={(a, b) => a.start - b.start}
+      />
+      <Events
+        events={events}
+        header="Past Events"
+        filter={(event) => new Date() > event.end}
+        sort={(a, b) => b.start - a.start}
+        visible={4}
+      />
     </div>
   );
 }

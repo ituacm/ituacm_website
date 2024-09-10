@@ -2,18 +2,22 @@ import React, { useEffect, useState } from "react";
 import "./Events.css";
 import EventCard from "../EventCard/EventCard";
 import { useSearchParams } from "react-router-dom";
-import Modal from "../Modal/Modal";
 import EventModal from "../Modals/EventModal/EventModal";
 
-function Events({ events }) {
-  const defaultVisibleEventCount = 8;
-  const [visibleEvents, setVisibleEvents] = useState(defaultVisibleEventCount);
+function Events({
+  events,
+  header = "",
+  filter = () => true,
+  sort = null,
+  visible = 0,
+}) {
+  const [visibleEvents, setVisibleEvents] = useState(visible);
   const [showMore, setShowMore] = useState(false);
   const toggleShowMoreEvents = () => {
     if (!showMore) {
       setVisibleEvents(events.length);
     } else {
-      setVisibleEvents(defaultVisibleEventCount);
+      setVisibleEvents(visible);
     }
     setShowMore(!showMore);
   };
@@ -22,37 +26,50 @@ function Events({ events }) {
   const modalEvent = events.find(
     (event) => event.id.toString() === searchParams.get("id")
   );
+
   useEffect(() => {
     modalEvent
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "");
   }, [modalEvent]);
+  const [listingEvents, setListingEvents] = useState(
+    events.sort(sort).filter(filter)
+  );
 
-  return (
-    <>
-      <div className="events-container">
-        <div className="events">
-          {events
-            .sort((a, b) => b.start - a.start)
-            .slice(0, visibleEvents)
-            .map((event, index) => {
-              return (
-                <div key={index} className="event">
-                  <EventCard event={event} page={"events"} />
-                </div>
-              );
-            })}
+  return listingEvents.length != 0 ? (
+    <div className="events-container">
+      <div className="events">
+        {header ? <h1 className="events-header">{header}</h1> : null}
+        <div className="events-list">
+          {!visible
+            ? listingEvents.map((event, index) => {
+                return (
+                  <div key={index} className="event">
+                    <EventCard event={event} page={"events"} />
+                  </div>
+                );
+              })
+            : listingEvents.slice(0, visibleEvents).map((event, index) => {
+                return (
+                  <div key={index} className="event">
+                    <EventCard event={event} page={"events"} />
+                  </div>
+                );
+              })}
         </div>
-        <button
-          className="primary-button events-show-button"
-          onClick={toggleShowMoreEvents}
-        >
-          {showMore ? "Show Less" : "Show More"}
-        </button>
+        {visible && listingEvents.length > visible ? (
+          <button
+            className="primary-button events-show-button"
+            onClick={toggleShowMoreEvents}
+          >
+            {showMore ? "Show Less" : "Show More"}
+          </button>
+        ) : null}
       </div>
-
       {modalEvent && <EventModal event={modalEvent} />}
-    </>
+    </div>
+  ) : (
+    <></>
   );
 }
 
