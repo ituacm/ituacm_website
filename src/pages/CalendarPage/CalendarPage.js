@@ -6,6 +6,7 @@ import EventCalendar from "../../components/EventCalendar/EventCalendar";
 function CalendarPage() {
   const [calendarData, setCalendarData] = useState(useLoaderData());
   const [calendarEvents, setCalendarEvents] = useState([]);
+  const courses = calendarData.courses;
   useEffect(() => {
     setCalendarEvents((prevEvents) => [
       ...calendarData.events,
@@ -15,7 +16,7 @@ function CalendarPage() {
   }, [calendarData]);
   return (
     <div className="calendar-page-container">
-      <EventCalendar events={calendarEvents} />
+      <EventCalendar events={calendarEvents} courses={courses} />
     </div>
   );
 }
