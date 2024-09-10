@@ -3,6 +3,7 @@ import "./WhatsNext.css";
 import EventCard from "../EventCard/EventCard";
 import { Link, useSearchParams } from "react-router-dom";
 import EventModal from "../Modals/EventModal/EventModal";
+import CourseModal from "../Modals/CourseModal/CourseModal";
 
 function WhatsNext({ events }) {
   const [whatsNextEvents, setWhatsNextEvents] = useState([]);
@@ -46,7 +47,14 @@ function WhatsNext({ events }) {
         >
           See all
         </Link>
-        {modalEvent && <EventModal event={modalEvent} />}
+        {modalEvent && modalEvent.lectures && (
+          <CourseModal
+            course={events.courses.find((course) => modalEvent.id == course.id)}
+          />
+        )}
+        {modalEvent && !modalEvent.lectures && (
+          <EventModal event={modalEvent} />
+        )}
       </div>
     </div>
   );
