@@ -31,6 +31,8 @@ function EventCalendar({ events, courses }) {
         events={events}
         defaultView="month"
         onSelectEvent={handleSelectEvent}
+        views={["month", "week", "agenda"]}
+        min={new Date().setHours(10, 0, 0, 0)}
       />
       {selectedEvent ? (
         <div className="calendar-selected-event-details">
