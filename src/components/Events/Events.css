@@ -7,6 +7,16 @@
 }
 .events{
     width: 90%;
+}
+.events-header{
+    font-size: 3rem;
+    width: 100%;
+    text-align: left;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+.events-list{
+    width: 100%;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
