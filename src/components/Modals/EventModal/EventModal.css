@@ -61,12 +61,21 @@
     flex-direction: column;
     align-items: left;
 }
+.event-modal-description{
+  font-weight: 500;
+}
+.event-modal-text{
+  font-weight: 400;
+}
 .event-modal-detail-section{
     margin-top: 0.4rem;
     display: flex;
     align-items: center;
     justify-content:left ;
     gap:0.3rem
+}
+.event-modal-detail-section p{
+  font-weight: 500;
 }
 .event-modal-icon{
     font-size: 1.3rem;

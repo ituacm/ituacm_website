@@ -20,6 +20,20 @@ function EventCalendar({ events, courses }) {
     console.log(event);
   };
 
+  const eventStyleGetter = (event) => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const eventStart = new Date(event.start);
+    eventStart.setHours(0, 0, 0, 0);
+
+    const className = `${eventStart < today ? "rbc-event--past" : ""} ${
+      event.subject ? "rbc-event--course" : "rbc-event--event"
+    }`;
+    return {
+      className,
+    };
+  };
+
   const [searchParams] = useSearchParams();
   const modalEvent = events.find(
     (event) => event.id.toString() === searchParams.get("id")
@@ -33,6 +47,7 @@ function EventCalendar({ events, courses }) {
         onSelectEvent={handleSelectEvent}
         views={["month", "week", "agenda"]}
         min={new Date().setHours(10, 0, 0, 0)}
+        eventPropGetter={eventStyleGetter}
       />
       {selectedEvent ? (
         <div className="calendar-selected-event-details">

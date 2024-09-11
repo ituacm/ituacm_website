@@ -18,15 +18,13 @@ const AboutHomePage = () => {
 
       let startRange;
 
-        if(viewHeight<=630){
-           startRange = viewHeight * 1.8; 
-        } 
-        else if(viewHeight<=750){
-            startRange = viewHeight * 1.55; 
-        }
-        else{
-            startRange = viewHeight * 1.25; 
-        }
+      if (viewHeight <= 630) {
+        startRange = viewHeight * 1.8;
+      } else if (viewHeight <= 750) {
+        startRange = viewHeight * 1.55;
+      } else {
+        startRange = viewHeight * 1.25;
+      }
 
       if (scrollPosition >= startRange) {
         setIsBetween(true);
@@ -54,12 +52,14 @@ const AboutHomePage = () => {
       <div className="overlay">
         <h2 className="header">Who are we?</h2>
         <p className="paragraph">
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Enim morbi nunc
-          turpis hendrerit accumsan, ultricies magna finibus. Eleifend molestie
-          efficitur vulputate porttitor natoque quisque adipiscing. Erat
-          condimentum aenean tempor sagittis sem pharetra pellentesque. Etiam
-          proin metus nisl maecenas inceptos metus. Nostra dui iaculis hendrerit
-          nisi nam netus.
+          ITU ACM Student Chapter is the largest computer science and software
+          club at Istanbul Technical University. We provide students with
+          opportunities to enhance their technical skills, build projects, and
+          connect with the industry. Hosting prestigious events like AlgoComp,
+          we also offer hackathons, technical workshops, and social activities
+          to prepare students for both academic and professional success. Join
+          the ITU ACM family and accelerate your growth as part of our vibrant
+          community!
         </p>
         <button className="learn-more" onClick={handleLearnMore}>
           {" "}

@@ -26,6 +26,7 @@
     white-space:nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: 400;
 }
 .eventcard-detail-section{
     margin-top: 0.4rem;
@@ -33,6 +34,9 @@
     align-items: center;
     justify-content:left ;
     gap:0.3rem
+}
+.eventcard-detail{
+    font-weight: 500;
 }
 .eventcard-icon{
     font-size: 1.3rem;

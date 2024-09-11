@@ -5,18 +5,28 @@ import { MdLocationOn } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
 import {
   LongtermCourseLabel,
+  NextWeekLabel,
+  PastEventLabel,
   ThisWeekLabel,
   TodayLabel,
   TomorrowLabel,
   WorkshopLabel,
 } from "../Labels/Label";
-import Modal from "../Modal/Modal";
 import { useNavigate } from "react-router-dom";
 
 function EventCard({ event, page }) {
   const navigate = useNavigate();
   function createSearchQuery() {
     navigate(`/${page}?id=${event.id}`);
+  }
+  function weekDiffFromToday(date) {
+    const today = new Date();
+    let weekDiff = 0;
+    while (date > today) {
+      today.setDate(today.getDate() + 1);
+      if (today.getDay() == 1) weekDiff++;
+    }
+    return weekDiff;
   }
 
   return (
@@ -25,21 +35,30 @@ function EventCard({ event, page }) {
         <div className="eventcard-time-label">
           {(() => {
             const today = new Date();
-            today.setHours(0, 0, 0, 0); // Saat, dakika, saniye sıfırla
-            const todayTime = today.getTime(); // GetTime() kullanarak bugünün zamanını al
-
-            const eventStart = new Date(event.start); // event.start'ı bozmamak için kopyasını oluştur
-            eventStart.setHours(0, 0, 0, 0); // Saat, dakika, saniye sıfırla
-
-            const timeDifference =
-              (eventStart.getTime() - todayTime) / (1000 * 60 * 60 * 24); // Gün farkını hesapla
-
-            if (timeDifference === 0) {
+            today.setHours(0, 0, 0, 0);
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            const eventStart = new Date(event.start);
+            eventStart.setHours(0, 0, 0, 0);
+            if (
+              today.getDate() == eventStart.getDate() &&
+              today.getMonth() == eventStart.getMonth() &&
+              today.getFullYear() == eventStart.getFullYear()
+            ) {
               return <TodayLabel />;
-            } else if (timeDifference === 1) {
+            } else if (eventStart < today) {
+              return <PastEventLabel />;
+            } else if (
+              tomorrow.getDate() == eventStart.getDate() &&
+              tomorrow.getMonth() == eventStart.getMonth() &&
+              tomorrow.getFullYear() == eventStart.getFullYear()
+            ) {
               return <TomorrowLabel />;
-            } else if (timeDifference < 7 && timeDifference > 1) {
+            } else if (weekDiffFromToday(eventStart) == 0) {
               return <ThisWeekLabel />;
+            } else if (weekDiffFromToday(eventStart) == 1) {
+              return <NextWeekLabel />;
             }
           })()}
         </div>
@@ -48,7 +67,7 @@ function EventCard({ event, page }) {
           <div className="eventcard-labels">
             {(() => {
               if (event.lectures) {
-                if (event.isWorkshop) {
+                if (event.lectures.length == 1) {
                   return <WorkshopLabel />;
                 } else {
                   return <LongtermCourseLabel />;

@@ -21,7 +21,7 @@ export const homeLoader = async () => {
   const coursesData = await response.json();
   const formattedCoursesData = coursesData.map((course) => ({
     ...course,
-    id: elementId,
+    id: elementId++,
     start: new Date(course.lectures[0].start),
     location: course.lectures[0].location,
     lectures: course.lectures.map((lecture) => ({

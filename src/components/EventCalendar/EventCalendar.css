@@ -1,62 +1,73 @@
 .event-calendar-container{
-    width:90%;
-    padding-top: 6rem;
-    display: flex;
-    align-items: start;
-    height:35rem;
+  width:90%;
+  padding-top: 6rem;
+  display: flex;
+  align-items: start;
+  height:35rem;
 }
 .rbc-calendar{
-    width:60%;
+  width:60%;
 }
 .rbc-month-view{
-    border-radius: 0.5rem;
-    overflow: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 .rbc-header{
-    background-color: var(--primary-color);
-    color: #ffffff;
-    font-weight: 400;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-weight: 400;
 }
 .rbc-btn-group{
-    border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
-
-  
-  /* Butonlar */
-  .rbc-toolbar button {
-    background-color: var(--primary-color);
-    color: #fff;
-    transition: all 0.3s ease;
-  }
-  
-  /* Hover durumu */
-  .rbc-toolbar button:hover, .rbc-toolbar button.rbc-active:hover {
-    background-color: var(--accent-color);
-    color: #fff;
-  }
-  .rbc-toolbar button.rbc-active:focus, .rbc-toolbar button:active:focus{
-    background-color: #f3f3f3;
-    color: var(--primary-color);
-    box-shadow: inset 0 0 0 1px #ccc;
-  }
-  
-  /* Seçili (active) buton */
-  .rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
-    background-color: var(--primary-color);
-  }
+.rbc-toolbar-btn-group{
+  border-radius: 0.5rem;
+}
+.rbc-toolbar button {
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: all 0.3s ease;
+} 
+.rbc-toolbar button:hover, .rbc-toolbar button.rbc-active:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+.rbc-toolbar button.rbc-active:focus, .rbc-toolbar button:active:focus{
+  background-color: #f3f3f3;
+  color: var(--primary-color);
+  box-shadow: inset 0 0 0 1px #ccc;
+} 
+.rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
+  background-color: var(--primary-color);
+}
 .calendar-selected-event-details{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:40%;
-    height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:40%;
+  height:100%;
 }
 .calendar-event-not-selected{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:40%;
-    height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:40%;
+  height:100%;
+}
+.rbc-event--past{
+  opacity:0.6
+}
+.rbc-event--event{
+  background-color: #ffcd00 !important;
+  color: #000;
+}
+.rbc-event--course{
+  background-color: #71c5e8 !important;
+  color: #000;
+}
+.rbc-selected.rbc-event{
+  box-shadow: inset 0 0 0 2px #000;
+  background-color: unset;
 }

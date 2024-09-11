@@ -11,6 +11,16 @@
     object-fit:cover;
     border-radius: 0.5rem;
 }
+.course-card-time-label{
+    position: absolute;
+    top: 0.5rem;
+    left:0.5rem;
+}
+.course-card-labels{
+    padding-top: 0.2rem;
+    display: flex;
+    gap: 0.3rem;
+}
 .course-card-right{
     height: 100%;
     width: fill;
