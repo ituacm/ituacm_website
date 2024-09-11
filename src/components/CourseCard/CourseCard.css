@@ -1,0 +1,66 @@
+.course-card-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+}
+.course-card-image{
+    width: 22rem;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 0.5rem;
+}
+.course-card-time-label{
+    position: absolute;
+    top: 0.5rem;
+    left:0.5rem;
+}
+.course-card-labels{
+    padding-top: 0.2rem;
+    display: flex;
+    gap: 0.3rem;
+}
+.course-card-right{
+    height: 100%;
+    width: fill;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.course-card-content{
+    height: 95%;
+    width: 40rem;
+    padding-left: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.course-card-title{
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+.course-card-description{
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.course-card-text{
+    font-size: 1rem;
+}
+.course-card-detail-section{
+    margin-top: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content:left ;
+    gap:0.3rem
+}
+.course-card-icon{
+    font-size: 1.3rem;
+    width: 1.5rem;
+    align-items: center;
+}
+.course-card-see-details-button{
+    margin-right: 3rem;
+}

@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import "./HomePage.css";
 import HomeIntro from "../../components/HomeIntro/HomeIntro";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
+import Sponsors from "../../components/Sponsors/Sponsors";
+import Stats from "../../components/Stats/Stats";
+import AboutHomePage from "../../components/AboutHomePage/AboutHomePage";
+import WhatsNext from "../../components/WhatsNext/WhatsNext";
+import { useLoaderData } from "react-router-dom";
 
 function HomePage() {
+  const homeData = useLoaderData();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="home-page-containers">
-      <Navbar />
+    <div className="home-page-container">
       <HomeIntro />
-      <Footer />
+      <Stats />
+      <Sponsors />
+      <WhatsNext events={homeData} />
+      <AboutHomePage />
     </div>
   );
 }
