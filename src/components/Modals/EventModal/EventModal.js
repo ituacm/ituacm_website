@@ -4,6 +4,13 @@ import "./EventModal.css";
 import { IoCalendarSharp } from "react-icons/io5";
 import { FaRegClock } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
+import {
+  NextWeekLabel,
+  PastEventLabel,
+  ThisWeekLabel,
+  TodayLabel,
+  TomorrowLabel,
+} from "../../Labels/Label";
 
 function EventModal({ event }) {
   const navigate = useNavigate();
@@ -12,10 +19,49 @@ function EventModal({ event }) {
       pathname: window.location.pathname,
     });
   };
+  function weekDiffFromToday(date) {
+    const today = new Date();
+    let weekDiff = 0;
+    while (date > today) {
+      today.setDate(today.getDate() + 1);
+      if (today.getDay() == 1) weekDiff++;
+    }
+    return weekDiff;
+  }
   return (
     <div className="event-modal-container">
       <div className="event-modal-overlay" onClick={clearModal}></div>
       <div className="event-modal-content">
+        <div className="event-modal-time-label">
+          {(() => {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            const eventStart = new Date(event.start);
+            eventStart.setHours(0, 0, 0, 0);
+            if (
+              today.getDate() == eventStart.getDate() &&
+              today.getMonth() == eventStart.getMonth() &&
+              today.getFullYear() == eventStart.getFullYear()
+            ) {
+              return <TodayLabel />;
+            } else if (eventStart < today) {
+              return <PastEventLabel />;
+            } else if (
+              tomorrow.getDate() == eventStart.getDate() &&
+              tomorrow.getMonth() == eventStart.getMonth() &&
+              tomorrow.getFullYear() == eventStart.getFullYear()
+            ) {
+              return <TomorrowLabel />;
+            } else if (weekDiffFromToday(eventStart) == 0) {
+              return <ThisWeekLabel />;
+            } else if (weekDiffFromToday(eventStart) == 1) {
+              return <NextWeekLabel />;
+            }
+          })()}
+        </div>
         <div className="event-modal-content-left">
           <img src={event.image} className="event-modal-photo" />
         </div>

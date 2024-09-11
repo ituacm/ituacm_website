@@ -5,6 +5,14 @@ import { MdLocationOn } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
 import { IoCalendarSharp } from "react-icons/io5";
 import LectureCard from "../../LectureCard/LectureCard";
+import {
+  NextWeekLabel,
+  OngoingLabel,
+  PastEventLabel,
+  StartsTodayLabel,
+  ThisWeekLabel,
+  TomorrowLabel,
+} from "../../Labels/Label";
 
 function CourseModal({ course }) {
   const navigate = useNavigate();
@@ -16,10 +24,53 @@ function CourseModal({ course }) {
   useEffect(() => {
     console.log(course);
   });
+  function weekDiffFromToday(date) {
+    const today = new Date();
+    let weekDiff = 0;
+    while (date > today) {
+      today.setDate(today.getDate() + 1);
+      if (today.getDay() == 1) weekDiff++;
+    }
+    return weekDiff;
+  }
   return (
     <div className="course-modal-container">
       <div className="course-modal-overlay" onClick={clearModal}></div>
       <div className="course-modal-content">
+        <div className="course-modal-time-label">
+          {(() => {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            const eventStart = new Date(course.start);
+            eventStart.setHours(0, 0, 0, 0);
+            const eventEnd = new Date(course.end);
+            eventEnd.setHours(0, 0, 0, 0);
+            if (today > eventStart && eventEnd > today) {
+              return <OngoingLabel />;
+            } else if (
+              today.getDate() == eventStart.getDate() &&
+              today.getMonth() == eventStart.getMonth() &&
+              today.getFullYear() == eventStart.getFullYear()
+            ) {
+              return <StartsTodayLabel />;
+            } else if (
+              tomorrow.getDate() == eventStart.getDate() &&
+              tomorrow.getMonth() == eventStart.getMonth() &&
+              tomorrow.getFullYear() == eventStart.getFullYear()
+            ) {
+              return <TomorrowLabel />;
+            } else if (eventStart < today) {
+              return <PastEventLabel />;
+            } else if (weekDiffFromToday(eventStart) == 0) {
+              return <ThisWeekLabel />;
+            } else if (weekDiffFromToday(eventStart) == 1) {
+              return <NextWeekLabel />;
+            }
+          })()}
+        </div>
         <div className="course-modal-content-left">
           <img src={course.image} className="course-modal-photo" />
         </div>
