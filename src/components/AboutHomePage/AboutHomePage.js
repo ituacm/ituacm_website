@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AboutHomePage.css";
+import pyCoursePhoto from "../../assets/2023pycourse.jpg";
 
 const AboutHomePage = () => {
   const navigate = useNavigate();
@@ -44,11 +45,7 @@ const AboutHomePage = () => {
 
   return (
     <div className={combinedClasses}>
-      <img
-        src="https://images.pexels.com/photos/7551762/pexels-photo-7551762.jpeg"
-        alt="ReplaceImage"
-        className="image"
-      />
+      <img src={pyCoursePhoto} alt="ReplaceImage" className="image" />
       <div className="overlay">
         <h2 className="header">Who are we?</h2>
         <p className="paragraph">
