@@ -1,0 +1,18 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v2
+
+    - run: docker stop ft
+    - run: docker build -t ituacm-ft .
+    - run: docker run -p --name ft 3000:3000 ituacm-ft
