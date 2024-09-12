@@ -1,17 +1,15 @@
-
-
 .board-member {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 95%;
+    height: 95%;
 }
-
 
 .board-member img {
     width: 100%;
-    height: 25rem;
+    height: 80%;
     border-radius:0.5rem;
     object-fit: cover;
 }
@@ -19,18 +17,20 @@
 .board-member-info {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    height: 20%;
 }
 
 .board-member-name {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 .board-member-role {
-    opacity: 0.5;
-    font-size: 18px;
+    opacity: 0.8;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .board-member-social {
@@ -54,82 +54,20 @@
     transform: translateY(-5px);
 }
 
-
-@media (max-width: 850px) {
-    .board-member {
-        width: 12rem;
-    }
-
-    .board-member img {
-        width: 12rem;
-        height: 14rem;
-    }
-
-    .board-member-icon{
-        font-size: 1.3em;
-    }
-    .board-member-name{
-        font-size: 1.3em;
-    }
-
-}
-
-@media (max-width: 650px) {
-    .board-member {
-        width: 10rem;
-    }
-
-    .board-member img {
-        width: 10rem;
-        height: 12rem;
-    }
-    .board-member-icon{
-        font-size: 1.2em;
-    }
-    .board-member-name{
-        font-size: 1.2em;
+@media(width<550px){
+    .board-member-name {
+        font-size: 1rem;
     }
     .board-member-role{
-        font-size: 17px;
+        font-size: 0.8rem;
     }
-}
-
-@media (max-width: 550px) {
-    .board-member {
-        width: 9rem;
+    .board-member img{
+        height: 75%;
     }
-
-    .board-member img {
-        width: 9rem;
-        height: 11rem;
+    .board-member-info{
+        height: 25%;
     }
     .board-member-icon{
-        font-size: 1.1em;
-    }
-    .board-member-name{
-        font-size: 1.1em;
-    } 
-    .board-member-role{
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 450px) {
-    .board-member {
-        width: 8rem;
-    }
-
-    .board-member img {
-        width: 7.5rem;
-        height: 8.5rem;
-    }
-    .board-member-icon{
-        font-size: 0.9em;
-    }
-    .board-member-name{
-        font-size: 0.9em;
-    } 
-    .board-member-role{
-        font-size: 14px;
+        font-size: 1rem;
     }
 }

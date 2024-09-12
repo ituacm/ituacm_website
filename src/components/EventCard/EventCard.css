@@ -38,6 +38,9 @@
 .eventcard-detail{
     font-weight: 500;
 }
+.eventcard-detail-text{
+    font-size: 1rem;
+}
 .eventcard-icon{
     font-size: 1.3rem;
     width: 1.5rem;
@@ -54,7 +57,10 @@
 }
 
 @media (max-width: 670px) {
-    .eventcard-image {
-      height: 15rem;
-    }
+  .eventcard-image {
+    height: 15rem;
   }
+  .eventcard-detail-text{
+    font-size: 0.8rem;
+  }
+}

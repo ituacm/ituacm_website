@@ -79,12 +79,14 @@ function EventCard({ event, page }) {
           <p className="eventcard-description">{event.description}</p>
           <div className="eventcard-detail-section">
             <IoCalendarSharp className="eventcard-icon" />
-            <p>{event.start.toDateString()}</p>
+            <p className="eventcard-detail-text">
+              {event.start.toDateString()}
+            </p>
           </div>
           <div className="eventcard-detail-section">
             <FaRegClock className="eventcard-icon" />
             {event.start.getMinutes() % 10 == 0 ? (
-              <p>
+              <p className="eventcard-detail-text">
                 {event.start.getHours() + ":" + "0" + event.start.getMinutes()}
               </p>
             ) : (
@@ -93,7 +95,7 @@ function EventCard({ event, page }) {
           </div>
           <div className="eventcard-detail-section">
             <MdLocationOn className="eventcard-icon" />
-            <p>{event.location}</p>
+            <p className="eventcard-detail-text">{event.location}</p>
           </div>
         </div>
       </div>
