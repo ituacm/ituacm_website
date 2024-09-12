@@ -25,7 +25,7 @@
     color: #000000;
     text-align: left;
     width: 33.333%;
-    padding: 1rem;
+    padding-bottom: 1rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     margin: 0.5rem;
@@ -42,53 +42,62 @@
 }
 
 .stat-icon {
-    margin-right: 1rem;
-    height: 2rem;
-    width: 2rem;
+    font-size: 2rem;
 }
 
 
 .stat-detail {
     font-size: 1.5rem; 
-    margin: 0;
+    padding-left: 0.8rem;
 }
 
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
     .stats {
         width: 95%;
     }
     .stat {
         width: 100%;
         align-items: center;
-       
-       
     }
-    .stat-detail{ font-size: 1.2rem;}
-    .stat-icon svg {
-        width: 25px; 
-        height: 25px; 
+    .stat-detail{ 
+        font-size: 1.2rem;
     }
+
+
     
 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 930px) {
     .stats {
-        width: 90%;
+        width: 100%;
         
         align-items: center;
     }
-    
-    .stat {
-        width: 100%;
-        align-items: center;
-       
-       
-    }
-    .stat-icon svg {
-        width: 20px; 
-        height: 20px; 
-    }
-    .stat-detail{ font-size: 0.8rem;}
+    .stat-detail{ font-size: 1.2rem;}
+}
+@media (max-width: 880px) {
+    .stat-detail{ font-size: 1rem;}
+    .stat-icon{font-size: 1.5rem;}
+}
+
+@media (max-width: 755px) {
+    .stat-detail{ font-size: 1rem;}
+    .stat-icon{font-size: 1rem;}
+}
+
+@media (max-width: 635px) {
+    .stat-detail{ font-size: 0.7rem;}
+    .stat-icon{font-size: 0.7rem;}
+}
+
+@media (max-width: 470px) {
+    .stat-detail{ font-size: 0.5rem;font-weight: 600;}
+    .stat-icon{font-size: 0.6rem;}
+}
+
+@media (max-width: 360px) {
+    .stat-detail{ font-size: 0.4rem;font-weight: 600;}
+    .stat-icon{font-size: 0.5rem;}
 }

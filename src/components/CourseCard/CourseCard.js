@@ -63,7 +63,7 @@ function CourseCard({ course }) {
           const eventEnd = new Date(course.end);
           eventEnd.setHours(0, 0, 0, 0);
           if (today > eventStart && eventEnd > today) {
-            return <OngoingLabel />;
+            return <OngoingLabel className="course-card-label" />;
           } else if (
             today.getDate() == eventStart.getDate() &&
             today.getMonth() == eventStart.getMonth() &&
@@ -104,7 +104,7 @@ function CourseCard({ course }) {
           <div className="course-card-detail-sections">
             <div className="course-card-detail-section">
               <LiaChalkboardTeacherSolid className="course-card-icon" />
-              <p>
+              <p className="course-card-detail-text">
                 {course.lectures.length +
                   " lessons, " +
                   course.lectures.length / 2 +
@@ -113,7 +113,7 @@ function CourseCard({ course }) {
             </div>
             <div className="course-card-detail-section">
               <IoCalendarSharp className="course-card-icon" />
-              <p>
+              <p className="course-card-detail-text">
                 {"Starting date: " + course.lectures[0].start.toDateString()}
               </p>
             </div>
