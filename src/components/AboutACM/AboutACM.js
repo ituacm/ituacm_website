@@ -9,13 +9,14 @@ const AboutACM = () => {
   }, []);
   return (
     <div className="about-page">
-      {/* Top Section */}
-      <section className="section top-section">
-        <div className="topleft-side">
-          <img src={roadmapPhoto} alt="About Image" className="section-image" />
+      <div className="top-section">
+
+        <div className="left-part">
+          <img src={roadmapPhoto} alt="AboutACM" className="left-part-image" />
         </div>
-        <div className="topright-side">
-          <h3> About ITU ACM Student Chapter</h3>
+
+        <div className="right-part">
+          <h3>About ITU ACM Student Chapter</h3>
           <p>
             ITU ACM Student Chapter is a student club founded under the Faculty
             of Computer and Informatics with the great support of our advisor
@@ -25,18 +26,19 @@ const AboutACM = () => {
             interest topics with the support of the academics for the growth of
             students’ technical skills together with social skills such as
             collaboration, communication and responsibility.
-          </p>
+            </p>
         </div>
-      </section>
+      </div>
 
-      {/* Middle Section */}
-      <section className="section middle-section">
-        <div className="middle-part left-part">
-          <h4 className="header-sideways">About ACM</h4>
+
+
+      <div className="mid-section">
+        <div className="left-part">
+          <h4>About Us</h4>
         </div>
-        <div className="middle-part center-part">
+        <div className="mid-part">
           <p>
-            The Association for Computing Machinery (ACM) is the world’s largest
+          The Association for Computing Machinery (ACM) is the world’s largest
             computing society, uniting educators, researchers, and professionals
             to inspire dialogue, share resources, and tackle field challenges.
             ACM enhances the profession through leadership, high standards, and
@@ -48,12 +50,14 @@ const AboutACM = () => {
             educational, and social issues.
           </p>
         </div>
-        <div className="middle-part right-part empty-space"></div>
-      </section>
+        <div className="right-part">
+        </div>
+      </div>
 
-      {/* Bottom Section */}
-      <section className="section bottom-section">
-        <div className="botleft-side">
+
+
+      <div className="bot-section">
+        <div className="left-part">
           <p>
             No matter what your background or major is, we would love to have
             you at our events and activities! To keep up with what’s happening,
@@ -97,15 +101,14 @@ const AboutACM = () => {
               <i className="fa-brands fa-twitter" aria-label="Twitter"></i>
             </a>
           </div>
+
         </div>
-        <div className="botright-side">
-          <img
-            src={pycoursePhoto}
-            alt="Mission Image"
-            className="section-image"
-          />
+
+        <div className="right-part">
+          <img src={pycoursePhoto} alt="OurMission" className="right-part-image"/>
         </div>
-      </section>
+      </div>
+
     </div>
   );
 };
