@@ -51,15 +51,17 @@
         flex-direction: row;
     }
     .course{
-        height: 28rem;
+        height: 26rem;
         width: 49%;
     }
 }
-@media(width<550px){
-    .courses-header{
-        font-size: 2rem;
+@media(width<450px){
+    .courses-list{
+        justify-content: center;
+        flex-direction: row;
     }
     .course{
-        height: 23rem;
+        height: 25rem;
+        width: 90%;
     }
 }

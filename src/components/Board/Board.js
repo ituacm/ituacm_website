@@ -8,7 +8,7 @@ export default function Board(props) {
   return (
     <div className="board-container">
       <span className="board-header">Our Board</span>
-      <div className="board">
+      <div className="board-list">
         {data.map((member) => {
           return (
             <div class="board-list-item">
