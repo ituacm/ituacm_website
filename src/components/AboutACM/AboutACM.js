@@ -10,7 +10,6 @@ const AboutACM = () => {
   return (
     <div className="about-page">
       <div className="top-section">
-
         <div className="left-part">
           <img src={roadmapPhoto} alt="AboutACM" className="left-part-image" />
         </div>
@@ -26,11 +25,9 @@ const AboutACM = () => {
             interest topics with the support of the academics for the growth of
             students’ technical skills together with social skills such as
             collaboration, communication and responsibility.
-            </p>
+          </p>
         </div>
       </div>
-
-
 
       <div className="mid-section">
         <div className="left-part">
@@ -38,7 +35,7 @@ const AboutACM = () => {
         </div>
         <div className="mid-part">
           <p>
-          The Association for Computing Machinery (ACM) is the world’s largest
+            The Association for Computing Machinery (ACM) is the world’s largest
             computing society, uniting educators, researchers, and professionals
             to inspire dialogue, share resources, and tackle field challenges.
             ACM enhances the profession through leadership, high standards, and
@@ -50,11 +47,8 @@ const AboutACM = () => {
             educational, and social issues.
           </p>
         </div>
-        <div className="right-part">
-        </div>
+        <div className="right-part"></div>
       </div>
-
-
 
       <div className="bot-section">
         <div className="left-part">
@@ -101,14 +95,16 @@ const AboutACM = () => {
               <i className="fa-brands fa-twitter" aria-label="Twitter"></i>
             </a>
           </div>
-
         </div>
 
         <div className="right-part">
-          <img src={pycoursePhoto} alt="OurMission" className="right-part-image"/>
+          <img
+            src={pycoursePhoto}
+            alt="OurMission"
+            className="right-part-image"
+          />
         </div>
       </div>
-
     </div>
   );
 };
