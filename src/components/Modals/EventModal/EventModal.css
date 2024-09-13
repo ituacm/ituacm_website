@@ -98,6 +98,10 @@
 }@media(width<800px){
   .event-modal-content{
     flex-direction: column;
+
+  }
+  .event-modal-photo{
+    height: 15rem;
   }
   .event-modal-content-left{
     width: 100%;

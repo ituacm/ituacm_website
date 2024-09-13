@@ -41,3 +41,11 @@
     width: 1.5rem;
     align-items: center;
 }
+@media(width<400px){
+    .lecture-subject{
+        font-size: 1.3rem;
+    }
+    .lecture-card-container{
+        height: 7rem;
+    }
+}
