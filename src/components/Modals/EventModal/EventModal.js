@@ -70,6 +70,8 @@ function EventModal({ event }) {
             <h1 className="event-modal-title">{event.title}</h1>
             <p className="event-modal-description">{event.description}</p>
             <p className="event-modal-text">{event.content}</p>
+          </div>
+          <div className="event-modal-content-right-bottom">
             <div className="event-modal-details">
               <div className="event-modal-detail-section">
                 <IoCalendarSharp className="event-modal-icon" />
@@ -95,14 +97,14 @@ function EventModal({ event }) {
                 <p>{event.location}</p>
               </div>
             </div>
+            <a
+              target="_blank"
+              href="https://docs.google.com/forms/d/1w4bAkhqatXXPSXyMjv_jzYFv9eZU2h0hLvLjhFA2yVc/viewform?edit_requested=true"
+              className="primary-button"
+            >
+              Join this event
+            </a>
           </div>
-          <a
-            target="_blank"
-            href="https://docs.google.com/forms/d/1w4bAkhqatXXPSXyMjv_jzYFv9eZU2h0hLvLjhFA2yVc/viewform?edit_requested=true"
-            className="primary-button"
-          >
-            Join this event
-          </a>
         </div>
       </div>
     </div>
