@@ -17,6 +17,8 @@
 .whats-next-events{
     display: flex;
     flex-wrap: wrap;
+    justify-content: left;
+    width:90%;
 }
 .whats-next-event{
     width: 33.3333%;
