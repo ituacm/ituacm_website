@@ -55,11 +55,15 @@
 .event-modal-content-right-top{
 
 }
+.event-modal-content-right-bottom{
+  padding-bottom: 1rem;
+}
 .event-modal-details{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: left;
+    padding-bottom: 1.5rem;
 }
 .event-modal-description{
   font-weight: 500;
@@ -86,4 +90,23 @@
     font-size: 1.3rem;
     width: 1.5rem;
     align-items: center;
+}
+@media(width<1000px){
+  .event-modal-content{
+    width: 90%;
+  }
+}@media(width<800px){
+  .event-modal-content{
+    flex-direction: column;
+
+  }
+  .event-modal-photo{
+    height: 15rem;
+  }
+  .event-modal-content-left{
+    width: 100%;
+  }
+  .event-modal-content-right{
+    width: 100%;
+  }
 }

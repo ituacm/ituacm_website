@@ -2,6 +2,11 @@ import React, { useEffect } from "react";
 import "./AboutACM.css";
 import roadmapPhoto from "../../assets/roadmap.png";
 import pycoursePhoto from "../../assets/2023pycourse.jpg";
+import { CiTwitter } from "react-icons/ci";
+import { CiLinkedin } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 const AboutACM = () => {
   useEffect(() => {
@@ -9,14 +14,14 @@ const AboutACM = () => {
   }, []);
   return (
     <div className="about-page">
-      {/* Top Section */}
-      <section className="section top-section">
-        <div className="topleft-side">
-          <img src={roadmapPhoto} alt="About Image" className="section-image" />
+      <div className="top-section">
+        <div className="top-section-left-part">
+          <img src={roadmapPhoto} alt="AboutACM" className="top-section-left-part-image" />
         </div>
-        <div className="topright-side">
-          <h3> About ITU ACM Student Chapter</h3>
-          <p>
+
+        <div className="top-section-right-part">
+          <h3 className="top-section-right-part-header">About ITU ACM Student Chapter</h3>
+          <p className="top-section-right-part-paragraph">
             ITU ACM Student Chapter is a student club founded under the Faculty
             of Computer and Informatics with the great support of our advisor
             Associate Professor Berk Canberk.Our mission is to unite the
@@ -27,15 +32,14 @@ const AboutACM = () => {
             collaboration, communication and responsibility.
           </p>
         </div>
-      </section>
+      </div>
 
-      {/* Middle Section */}
-      <section className="section middle-section">
-        <div className="middle-part left-part">
-          <h4 className="header-sideways">About ACM</h4>
+      <div className="mid-section">
+        <div className="mid-section-left-part">
+          <h4 className="mid-section-left-part-header">About Us</h4>
         </div>
-        <div className="middle-part center-part">
-          <p>
+        <div className="mid-section-mid-part">
+          <p className="mid-section-mid-part-paragraph">
             The Association for Computing Machinery (ACM) is the world’s largest
             computing society, uniting educators, researchers, and professionals
             to inspire dialogue, share resources, and tackle field challenges.
@@ -48,64 +52,66 @@ const AboutACM = () => {
             educational, and social issues.
           </p>
         </div>
-        <div className="middle-part right-part empty-space"></div>
-      </section>
+        <div className="mid-section-right-part"></div>
+      </div>
 
-      {/* Bottom Section */}
-      <section className="section bottom-section">
-        <div className="botleft-side">
-          <p>
-            No matter what your background or major is, we would love to have
-            you at our events and activities! To keep up with what’s happening,
-            we recommend checking out our events page. Here’s our social media,
-            where you can see what we’re up to:
-          </p>
-          <div className="icons">
-            <a
-              href="https://www.instagram.com/ituacmsc/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-brands fa-instagram" aria-label="Instagram"></i>
-            </a>
-            <a
-              href="https://www.youtube.com/channel/UCCjjmsgFh5lRWhwoRH6p3tA"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-brands fa-youtube" aria-label="YouTube"></i>
-            </a>
-            <a
-              href="https://github.com/ituacm"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-brands fa-github" aria-label="GitHub"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/company/ituacmsc/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-brands fa-linkedin" aria-label="LinkedIn"></i>
-            </a>
-            <a
-              href="https://twitter.com/ituacmsc"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-brands fa-twitter" aria-label="Twitter"></i>
-            </a>
+      <div className="bot-section">
+        <div className="bot-section-left-part">
+          <div className="bot-section-left-part-content">
+            <p className="bot-section-left-part-paragraph">
+              No matter what your background or major is, we would love to have
+              you at our events and activities! To keep up with what’s happening,
+              we recommend checking out our events page. Here’s our social media,
+              where you can see what we’re up to:
+            </p>
+            <div className="about-page-icons">
+              <a
+                href="https://www.instagram.com/ituacmsc/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCCjjmsgFh5lRWhwoRH6p3tA"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaYoutube />
+              </a>
+              <a
+                href="https://github.com/ituacm"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/ituacmsc/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <CiLinkedin />
+              </a>
+              <a
+                href="https://twitter.com/ituacmsc"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <CiTwitter />
+              </a>
+            </div>
           </div>
         </div>
-        <div className="botright-side">
+
+        <div className="bot-section-right-part">
           <img
             src={pycoursePhoto}
-            alt="Mission Image"
-            className="section-image"
+            alt="OurMission"
+            className="bot-section-right-part-image"
           />
         </div>
-      </section>
+      </div>
     </div>
   );
 };
