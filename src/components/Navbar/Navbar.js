@@ -41,7 +41,7 @@ function Navbar() {
         isAtTop ? "navbar-container  " : "navbar-container navbar-scroll"
       }
     >
-      {windowWidth > 768 ? (
+      {windowWidth >= 768 ? (
         <div className="navbar">
           <img className="logo" src={isAtTop ? blueLogo : whiteLogo} />
           <div className="navbar-link-container">
