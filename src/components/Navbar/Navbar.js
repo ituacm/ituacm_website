@@ -35,6 +35,16 @@ function Navbar() {
   //dropdown menu state
   const [dropdown, setDropdown] = useState(false);
 
+  //disable scrolling when dropdown menu is active
+
+  useEffect(() => {
+    if (!dropdown || windowWidth >= 768) {
+      document.body.style.overflow = 'auto';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
+  }, [dropdown, windowWidth])
+
   return (
     <div
       className={
