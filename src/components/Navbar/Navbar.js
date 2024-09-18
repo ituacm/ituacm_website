@@ -36,7 +36,6 @@ function Navbar() {
   const [dropdown, setDropdown] = useState(false);
 
   //disable scrolling when dropdown menu is active
-
   useEffect(() => {
     if (!dropdown || windowWidth >= 768) {
       document.body.style.overflow = 'auto';
@@ -44,6 +43,11 @@ function Navbar() {
       document.body.style.overflow = 'hidden';
     }
   }, [dropdown, windowWidth])
+
+  //scroll to the top of homepage when clicked on navbar logo
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
 
   return (
     <div
@@ -53,7 +57,7 @@ function Navbar() {
     >
       {windowWidth >= 768 ? (
         <div className="navbar">
-          <img className="logo" src={isAtTop ? blueLogo : whiteLogo} />
+          <NavLink to="/" onClick={scrollToTop}><img className="logo" src={isAtTop ? blueLogo : whiteLogo} /></NavLink>
           <div className="navbar-link-container">
             <NavLink to="/" className="navbar-link">
               Home
@@ -79,7 +83,7 @@ function Navbar() {
         //above is html for computer users
         //below is html for mobile users
         <>
-          <img className="logo" src={isAtTop ? blueLogo : whiteLogo} />
+          <NavLink to="/" onClick={scrollToTop}><img className="logo" src={isAtTop ? blueLogo : whiteLogo} /></NavLink>
           <div className="navbar-drowpdown">
             <div
               onClick={toggleDropdown}
