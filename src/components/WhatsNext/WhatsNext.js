@@ -28,8 +28,12 @@ function WhatsNext({ events }) {
       : (document.body.style.overflow = "");
   }, [modalEvent]);
 
-  return whatsNextEvents.length ? (
-    <div className="whats-next-container">
+  return (
+    <div
+      className={`whats-next-container ${
+        whatsNextEvents.length ? "" : "display-none"
+      }`}
+    >
       <div className="whats-next">
         <h1 className="whats-next-header">What's Next in ITUACM</h1>
         <div className="whats-next-events">
@@ -57,7 +61,7 @@ function WhatsNext({ events }) {
         )}
       </div>
     </div>
-  ) : null;
+  );
 }
 
 export default WhatsNext;

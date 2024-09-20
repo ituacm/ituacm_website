@@ -37,34 +37,39 @@ function HomeIntro() {
             </a>
           </li>
           <li>
-            <button className="primary-button home-intro-join-us-button">
-              Contact Us
-            </button>
+            <Link to={"/contact"}>
+              <button className="primary-button home-intro-join-us-button">
+                Contact Us
+              </button>
+            </Link>
           </li>
         </ul>
         <ul className="home-intro-links">
           <li className="home-intro-link">
-            <a href="/">
+            <a href="https://www.instagram.com/ituacmsc/" target="_blank">
               <FaInstagram className="home-intro-link-icon" />
             </a>
           </li>
           <li>
-            <a href="/">
+            <a
+              href="https://www.youtube.com/channel/UCCjjmsgFh5lRWhwoRH6p3tA"
+              target="_blank"
+            >
               <FaYoutube className="home-intro-link-icon" />
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="https://github.com/ituacm" target="_blank">
               <FaGithub className="home-intro-link-icon" />
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="https://www.linkedin.com/company/ituacmsc" target="_blank">
               <FaLinkedin className="home-intro-link-icon" />
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="https://x.com/ituacmsc" target="_blank">
               <FaXTwitter className="home-intro-link-icon" />
             </a>
           </li>
