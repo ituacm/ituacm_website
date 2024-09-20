@@ -20,6 +20,7 @@
     text-align: left;
     position:relative;
     margin-bottom: 1rem;
+    white-space: nowrap;
 }
 .home-intro-header::after{
     position: absolute;
