@@ -4,9 +4,10 @@ import roadmapPhoto from "../../assets/roadmap.png";
 import pycoursePhoto from "../../assets/2023pycourse.jpg";
 import { CiTwitter } from "react-icons/ci";
 import { CiLinkedin } from "react-icons/ci";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const AboutACM = () => {
   useEffect(() => {
@@ -16,11 +17,17 @@ const AboutACM = () => {
     <div className="about-page">
       <div className="top-section">
         <div className="top-section-left-part">
-          <img src={roadmapPhoto} alt="AboutACM" className="top-section-left-part-image" />
+          <img
+            src={roadmapPhoto}
+            alt="AboutACM"
+            className="top-section-left-part-image"
+          />
         </div>
 
         <div className="top-section-right-part">
-          <h3 className="top-section-right-part-header">About ITU ACM Student Chapter</h3>
+          <h3 className="top-section-right-part-header">
+            About ITU ACM Student Chapter
+          </h3>
           <p className="top-section-right-part-paragraph">
             ITU ACM Student Chapter is a student club founded under the Faculty
             of Computer and Informatics with the great support of our advisor
@@ -60,9 +67,9 @@ const AboutACM = () => {
           <div className="bot-section-left-part-content">
             <p className="bot-section-left-part-paragraph">
               No matter what your background or major is, we would love to have
-              you at our events and activities! To keep up with what’s happening,
-              we recommend checking out our events page. Here’s our social media,
-              where you can see what we’re up to:
+              you at our events and activities! To keep up with what’s
+              happening, we recommend checking out our events page. Here’s our
+              social media, where you can see what we’re up to:
             </p>
             <div className="about-page-icons">
               <a
@@ -91,14 +98,14 @@ const AboutACM = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <CiLinkedin />
+                <FaLinkedin />
               </a>
               <a
                 href="https://twitter.com/ituacmsc"
                 target="_blank"
                 rel="noreferrer"
               >
-                <CiTwitter />
+                <FaXTwitter />
               </a>
             </div>
           </div>
