@@ -36,7 +36,7 @@ function Events({
     events.sort(sort).filter(filter)
   );
 
-  return listingEvents.length != 0 ? (
+  return listingEvents.length ? (
     <div className="events-container">
       <div className="events">
         {header ? <h1 className="events-header">{header}</h1> : null}
