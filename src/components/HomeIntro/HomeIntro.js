@@ -17,7 +17,7 @@ function HomeIntro() {
   return (
     <div className="home-intro-container">
       <div className="home-intro-content">
-        <h1 className="home-intro-header">
+        <h1 className="home-intro-header" translate="no">
           {"W"}
           <Typewriter words={["elcome to ITU ACM!"]} loop={1} typeSpeed={100} />
         </h1>
@@ -31,14 +31,20 @@ function HomeIntro() {
               target="_blank"
               href="https://docs.google.com/forms/d/1w4bAkhqatXXPSXyMjv_jzYFv9eZU2h0hLvLjhFA2yVc/viewform?edit_requested=true"
             >
-              <button className="primary-button home-intro-join-us-button">
+              <button
+                className="primary-button home-intro-join-us-button"
+                translate="no"
+              >
                 Join us now
               </button>
             </a>
           </li>
           <li>
             <Link to={"/contact"}>
-              <button className="primary-button home-intro-join-us-button">
+              <button
+                className="primary-button home-intro-join-us-button"
+                translate="no"
+              >
                 Contact Us
               </button>
             </Link>
