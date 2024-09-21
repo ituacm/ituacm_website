@@ -50,41 +50,44 @@ function CourseCard({ course }) {
 
   return (
     <div className="course-card-container">
-      <img src={course.image} className="course-card-image" />
-      <div className="course-card-time-label">
-        {(() => {
-          const today = new Date();
-          today.setHours(0, 0, 0, 0);
-          const tomorrow = new Date();
-          tomorrow.setDate(tomorrow.getDate() + 1);
-          tomorrow.setHours(0, 0, 0, 0);
-          const eventStart = new Date(course.start);
-          eventStart.setHours(0, 0, 0, 0);
-          const eventEnd = new Date(course.end);
-          eventEnd.setHours(0, 0, 0, 0);
-          if (today > eventStart && eventEnd > today) {
-            return <OngoingLabel className="course-card-label" />;
-          } else if (
-            today.getDate() == eventStart.getDate() &&
-            today.getMonth() == eventStart.getMonth() &&
-            today.getFullYear() == eventStart.getFullYear()
-          ) {
-            return <StartsTodayLabel />;
-          } else if (
-            tomorrow.getDate() == eventStart.getDate() &&
-            tomorrow.getMonth() == eventStart.getMonth() &&
-            tomorrow.getFullYear() == eventStart.getFullYear()
-          ) {
-            return <TomorrowLabel />;
-          } else if (eventStart < today) {
-            return <PastEventLabel />;
-          } else if (weekDiffFromToday(eventStart) == 0) {
-            return <ThisWeekLabel />;
-          } else if (weekDiffFromToday(eventStart) == 1) {
-            return <NextWeekLabel />;
-          }
-        })()}
+      <div className="course-card-left">
+        <img src={course.image} className="course-card-image" />
+        <div className="course-card-time-label">
+          {(() => {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            const eventStart = new Date(course.start);
+            eventStart.setHours(0, 0, 0, 0);
+            const eventEnd = new Date(course.end);
+            eventEnd.setHours(0, 0, 0, 0);
+            if (today > eventStart && eventEnd > today) {
+              return <OngoingLabel className="course-card-label" />;
+            } else if (
+              today.getDate() == eventStart.getDate() &&
+              today.getMonth() == eventStart.getMonth() &&
+              today.getFullYear() == eventStart.getFullYear()
+            ) {
+              return <StartsTodayLabel />;
+            } else if (
+              tomorrow.getDate() == eventStart.getDate() &&
+              tomorrow.getMonth() == eventStart.getMonth() &&
+              tomorrow.getFullYear() == eventStart.getFullYear()
+            ) {
+              return <TomorrowLabel />;
+            } else if (eventStart < today) {
+              return <PastEventLabel />;
+            } else if (weekDiffFromToday(eventStart) == 0) {
+              return <ThisWeekLabel />;
+            } else if (weekDiffFromToday(eventStart) == 1) {
+              return <NextWeekLabel />;
+            }
+          })()}
+        </div>
       </div>
+
       <div className="course-card-right">
         <div className="course-card-content">
           <div className="course-card-content-top">
@@ -107,7 +110,10 @@ function CourseCard({ course }) {
               <p className="course-card-detail-text">
                 {course.lectures.length +
                   " lessons, " +
-                  course.lectures.length / 2 +
+                  Math.ceil(
+                    (course.end.getTime() - course.start.getTime()) /
+                      (1000 * 60 * 60 * 24 * 7)
+                  ) +
                   " weeks"}
               </p>
             </div>

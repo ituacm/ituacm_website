@@ -6,10 +6,14 @@
     width: 100%;
 }
 .course-card-image{
-    width: 22rem;
+    width: 100%;
     height: 100%;
     object-fit:cover;
     border-radius: 0.5rem;
+}
+.course-card-left{
+  width: 30rem;
+  height: 100%;
 }
 .course-card-time-label{
     position: absolute;
