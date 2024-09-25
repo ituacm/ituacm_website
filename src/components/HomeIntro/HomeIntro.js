@@ -23,7 +23,7 @@ function HomeIntro() {
         </h1>
         <p className="home-intro-text">
           Your Place for Skill-Building Opportunities, Engaging Events, and
-          Thrilling Tech Experiences in Istanbul Technical Universty
+          Thrilling Tech Experiences in Istanbul Technical University
         </p>
         <ul className="home-intro-button-group">
           <li>
