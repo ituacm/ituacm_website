@@ -80,7 +80,11 @@ function CourseModal({ course }) {
             <p className="course-modal-text">{course.content}</p>
             <div className="course-modal-lectures">
               <h2 className="course-modal-lectures-header">Lectures</h2>
-              <div className="course-modal-lectures-list">
+              <div
+                className={`course-modal-lectures-list ${
+                  course.lectures.length ? "" : "display-none"
+                }`}
+              >
                 {course.lectures.map((lecture, index) => {
                   return (
                     <div key={index} className="course-modal-lecture">

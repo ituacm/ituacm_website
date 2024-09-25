@@ -99,7 +99,7 @@ function EventModal({ event }) {
             </div>
             <a
               target="_blank"
-              href="https://docs.google.com/forms/d/1w4bAkhqatXXPSXyMjv_jzYFv9eZU2h0hLvLjhFA2yVc/viewform?edit_requested=true"
+              href={event.registrationLink}
               className="primary-button"
             >
               Join this event

@@ -15,23 +15,27 @@ const AboutHomePage = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const viewHeight = window.innerHeight;
-
+      const bodyHeight = document.body.clientHeight;
+      const viewportWidth = window.innerWidth;
       let startRange;
 
-      if (viewHeight <= 630) {
-        startRange = viewHeight * 1.8;
-      } else if (viewHeight <= 750) {
-        startRange = viewHeight * 1.55;
-      } else {
-        startRange = viewHeight * 1.25;
+      if(viewportWidth-2 > 900){ //viewheight gets weird when it nears 900.
+        startRange = bodyHeight - (1000+227);//227 is the height of the footer when its the viewheight is bigger than 900.
+      }else if(viewportWidth-2 <= 900){
+        startRange = bodyHeight - (900+427);//427 is the height of the footer when the viewheight is 900 or smaller. 
+        //900 in caculation is 500px's of image card + 400pxs so that as soon as the user sees the top of the AboutHome it becomes
+        //AboutHome scrolled.
+
+        //TODO: make this dynamic.
       }
+
 
       if (scrollPosition >= startRange) {
         setIsBetween(true);
       } else {
         setIsBetween(false);
       }
+      
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -39,9 +43,9 @@ const AboutHomePage = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isBetween]);
 
-  const combinedClasses = `image-card ${isBetween ? "scrolled" : ""}`;
+  const combinedClasses = `AboutHome ${isBetween ? "scrolled" : ""}`;
 
   return (
     <div className={combinedClasses}>
@@ -59,7 +63,6 @@ const AboutHomePage = () => {
           community!
         </p>
         <button className="learn-more" onClick={handleLearnMore}>
-          {" "}
           Learn More
         </button>
       </div>

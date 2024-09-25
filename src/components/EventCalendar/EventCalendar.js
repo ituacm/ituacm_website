@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Calendar, dayjsLocalizer } from "react-big-calendar";
 import dayjs from "dayjs";
 import "react-big-calendar/lib/css/react-big-calendar.css";
@@ -33,11 +33,21 @@ function EventCalendar({ events, courses }) {
       className,
     };
   };
-
+  useEffect(() => {
+    console.log(courses);
+  }, []);
   const [searchParams] = useSearchParams();
-  const modalEvent = events.find(
-    (event) => event.id.toString() === searchParams.get("id")
-  );
+  const modalEvent =
+    Number(searchParams.get("id")) < 1000
+      ? events.find((event) => event.id.toString() === searchParams.get("id"))
+      : courses.find(
+          (course) => course.id.toString() === searchParams.get("id")
+        );
+  useEffect(() => {
+    modalEvent
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "");
+  }, [modalEvent]);
   return (
     <div className="event-calendar-container">
       <Calendar
@@ -58,12 +68,8 @@ function EventCalendar({ events, courses }) {
           <p>Select an event from calendar</p>
         </div>
       )}
-      {modalEvent && modalEvent.subject && (
-        <CourseModal
-          course={courses.find((course) => modalEvent.courseId == course.id)}
-        />
-      )}
-      {modalEvent && !modalEvent.subject && <EventModal event={modalEvent} />}
+      {modalEvent && modalEvent.lectures && <CourseModal course={modalEvent} />}
+      {modalEvent && !modalEvent.lectures && <EventModal event={modalEvent} />}
     </div>
   );
 }

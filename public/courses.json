@@ -1,224 +1,125 @@
 [
   {
-    "id": 1,
-    "title": "Intro to Programming",
-    "description": "A beginner-level course that introduces the basics of programming.",
-    "content": "This course covers fundamental programming concepts including variables, loops, and functions. It is perfect for students who are new to programming.",
-    "image": "./image.png",
+    "id": 1001,
+    "title": "Introduction to Programming with Python",
+    "description": "A beginner-level course that introduces Python programming basics.",
+    "content": "This course covers fundamental Python programming concepts including primitive data types, control flow, functions, and object-oriented programming. It is perfect for students who are new to programming.",
+    "image": "./py101_2023.png",
     "lectures": [
       {
         "lectureNumber": 1,
-        "subject": "Introduction to Programming",
-        "start": "2024-09-10T10:00:00Z",
-        "end": "2024-09-10T12:00:00Z",
-        "location": "Room 101"
+        "subject": "Introduction",
+        "start": "2023-10-30T18:00:00Z",
+        "end": "2023-10-30T20:00:00Z",
+        "location": "Room 101",
+        "instructors": "Rojen Arda Şeşen, İsmet Arca Erdoğar"
       },
       {
         "lectureNumber": 2,
-        "subject": "Variables and Data Types",
-        "start": "2024-09-12T10:00:00Z",
-        "end": "2024-09-12T12:00:00Z",
-        "location": "Room 102"
+        "subject": "Primitive Data Types and Control Flow",
+        "start": "2023-11-06T18:00:00Z",
+        "end": "2023-11-06T20:00:00Z",
+        "location": "Room 102",
+        "instructors": "Rojen Arda Şeşen, İsmet Arca Erdoğar"
       },
       {
         "lectureNumber": 3,
-        "subject": "Control Structures",
-        "start": "2024-09-14T10:00:00Z",
-        "end": "2024-09-14T12:00:00Z",
-        "location": "Room 103"
+        "subject": "Containers, Iterators and Generators",
+        "start": "2023-11-13T18:00:00Z",
+        "end": "2023-11-13T20:00:00Z",
+        "location": "Room 103",
+        "instructors": "Rojen Arda Şeşen, İsmet Arca Erdoğar"
       },
       {
         "lectureNumber": 4,
-        "subject": "Functions and Modularization",
-        "start": "2024-09-16T10:00:00Z",
-        "end": "2024-09-16T12:00:00Z",
-        "location": "Room 104"
+        "subject": "Functions and File I/O",
+        "start": "2023-11-20T18:00:00Z",
+        "end": "2023-11-20T20:00:00Z",
+        "location": "Room 104",
+        "instructors": "Rojen Arda Şeşen, İsmet Arca Erdoğar"
+      },
+      {
+        "lectureNumber": 5,
+        "subject": "Object Oriented Programming",
+        "start": "2023-11-27T18:00:00Z",
+        "end": "2023-11-27T20:00:00Z",
+        "location": "Room 105",
+        "instructors": "Rojen Arda Şeşen, İsmet Arca Erdoğar"
+      },
+      {
+        "lectureNumber": 6,
+        "subject": "Wrap-up",
+        "start": "2023-12-04T18:00:00Z",
+        "end": "2023-12-04T20:00:00Z",
+        "location": "Room 106",
+        "instructors": "Rojen Arda Şeşen, İsmet Arca Erdoğar"
       }
     ]
   },
   {
-    "id": 2,
-    "title": "Advanced Web Development",
-    "description": "A course designed for those looking to enhance their web development skills.",
-    "content": "This course will cover advanced topics in web development such as responsive design, performance optimization, and server-side rendering.",
-    "image": "./image.png",
+    "id": 1002,
+    "title": "Algo101",
+    "description": "An introductory course to algorithms designed for students interested in enhancing their problem-solving skills.",
+    "content": "This course will cover essential algorithms and data structures, providing a solid foundation for further studies in computer science.",
+    "image": "./algo101_2023.png",
     "lectures": [
       {
         "lectureNumber": 1,
-        "subject": "Introduction to Advanced Web Development",
-        "start": "2024-09-17T14:00:00Z",
-        "end": "2024-09-17T16:00:00Z",
-        "location": "Room 201"
+        "subject": "Introduction",
+        "start": "2023-10-31T18:00:00Z",
+        "end": "2023-10-31T20:00:00Z",
+        "location": "EHB 2102",
+        "instructors": "Kemal Tahir Bıcılıoğlu"
       },
       {
         "lectureNumber": 2,
-        "subject": "Responsive Design Techniques",
-        "start": "2024-09-19T14:00:00Z",
-        "end": "2024-09-19T16:00:00Z",
-        "location": "Room 202"
+        "subject": "Data Structures",
+        "start": "2023-11-07T18:00:00Z",
+        "end": "2023-11-07T20:00:00Z",
+        "location": "EHB 2102",
+        "instructors": "Ali Kemal Coşkun"
       },
       {
         "lectureNumber": 3,
-        "subject": "Performance Optimization",
-        "start": "2024-09-21T14:00:00Z",
-        "end": "2024-09-21T16:00:00Z",
-        "location": "Room 203"
+        "subject": "Math",
+        "start": "2023-11-14T18:00:00Z",
+        "end": "2023-11-14T20:00:00Z",
+        "location": "EHB 2102",
+        "instructors": "Fatih Çakır"
       },
       {
         "lectureNumber": 4,
-        "subject": "Server-Side Rendering",
-        "start": "2024-09-23T14:00:00Z",
-        "end": "2024-09-23T16:00:00Z",
-        "location": "Room 204"
+        "subject": "Intro to Graphs and Trees",
+        "start": "2023-11-21T18:00:00Z",
+        "end": "2023-11-21T20:00:00Z",
+        "location": "EHB 2102",
+        "instructors": "Ramazan Taş"
+      },
+      {
+        "lectureNumber": 5,
+        "subject": "Graph Related Problems",
+        "start": "2023-11-28T18:00:00Z",
+        "end": "2023-11-28T20:00:00Z",
+        "location": "EHB 2102",
+        "instructors": "Anıl Dervişoğlu"
+      },
+      {
+        "lectureNumber": 6,
+        "subject": "Dynamic Programming",
+        "start": "2023-12-05T18:00:00Z",
+        "end": "2023-12-05T20:00:00Z",
+        "location": "EHB 2102",
+        "instructors": "Ayşe Sarı"
+      },
+      {
+        "lectureNumber": 7,
+        "subject": "Contest Week",
+        "start": "2023-12-12T18:00:00Z",
+        "end": "2023-12-12T20:00:00Z",
+        "location": "EHB 2102",
+        "instructors": "AlgoTeam"
       }
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Data Structures",
-    "description": "A course focused on fundamental data structures.",
-    "content": "Learn about various data structures like arrays, stacks, queues, linked lists, and trees.",
-    "image": "./image.png",
-    "lectures": [
-      {
-        "lectureNumber": 1,
-        "subject": "Introduction to Data Structures",
-        "start": "2024-08-10T09:00:00Z",
-        "end": "2024-08-10T11:00:00Z",
-        "location": "Room 301"
-      },
-      {
-        "lectureNumber": 2,
-        "subject": "Arrays and Linked Lists",
-        "start": "2024-08-12T09:00:00Z",
-        "end": "2024-08-12T11:00:00Z",
-        "location": "Room 302"
-      },
-      {
-        "lectureNumber": 3,
-        "subject": "Stacks and Queues",
-        "start": "2024-08-14T09:00:00Z",
-        "end": "2024-08-14T11:00:00Z",
-        "location": "Room 303"
-      },
-      {
-        "lectureNumber": 4,
-        "subject": "Trees and Graphs",
-        "start": "2024-08-16T09:00:00Z",
-        "end": "2024-08-16T11:00:00Z",
-        "location": "Room 304"
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "title": "Database Management Systems",
-    "description": "An advanced course on database management systems.",
-    "content": "This course covers relational databases, SQL, and NoSQL databases.",
-    "image": "./image.png",
-    "lectures": [
-      {
-        "lectureNumber": 1,
-        "subject": "Introduction to DBMS",
-        "start": "2024-07-01T11:00:00Z",
-        "end": "2024-07-01T13:00:00Z",
-        "location": "Room 401"
-      },
-      {
-        "lectureNumber": 2,
-        "subject": "Relational Databases",
-        "start": "2024-07-03T11:00:00Z",
-        "end": "2024-07-03T13:00:00Z",
-        "location": "Room 402"
-      },
-      {
-        "lectureNumber": 3,
-        "subject": "SQL Basics",
-        "start": "2024-07-05T11:00:00Z",
-        "end": "2024-07-05T13:00:00Z",
-        "location": "Room 403"
-      },
-      {
-        "lectureNumber": 4,
-        "subject": "NoSQL Databases",
-        "start": "2024-07-07T11:00:00Z",
-        "end": "2024-07-07T13:00:00Z",
-        "location": "Room 404"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "title": "Machine Learning",
-    "description": "An introduction to machine learning concepts and algorithms.",
-    "content": "This course covers supervised and unsupervised learning, along with neural networks and deep learning.",
-    "image": "./image.png",
-    "lectures": [
-      {
-        "lectureNumber": 1,
-        "subject": "Introduction to Machine Learning",
-        "start": "2024-09-05T10:00:00Z",
-        "end": "2024-09-05T12:00:00Z",
-        "location": "Room 501"
-      },
-      {
-        "lectureNumber": 2,
-        "subject": "Supervised Learning",
-        "start": "2024-09-07T10:00:00Z",
-        "end": "2024-09-07T12:00:00Z",
-        "location": "Room 502"
-      },
-      {
-        "lectureNumber": 3,
-        "subject": "Unsupervised Learning",
-        "start": "2024-09-09T10:00:00Z",
-        "end": "2024-09-09T12:00:00Z",
-        "location": "Room 503"
-      },
-      {
-        "lectureNumber": 4,
-        "subject": "Deep Learning",
-        "start": "2024-09-11T10:00:00Z",
-        "end": "2024-09-11T12:00:00Z",
-        "location": "Room 504"
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "title": "Cybersecurity Fundamentals",
-    "description": "Learn the basics of cybersecurity and protecting systems.",
-    "content": "This course covers network security, cryptography, and vulnerability management.",
-    "image": "./image.png",
-    "lectures": [
-      {
-        "lectureNumber": 1,
-        "subject": "Introduction to Cybersecurity",
-        "start": "2024-09-13T11:00:00Z",
-        "end": "2024-09-13T13:00:00Z",
-        "location": "Room 601"
-      },
-      {
-        "lectureNumber": 2,
-        "subject": "Network Security",
-        "start": "2024-09-15T11:00:00Z",
-        "end": "2024-09-15T13:00:00Z",
-        "location": "Room 602"
-      },
-      {
-        "lectureNumber": 3,
-        "subject": "Cryptography",
-        "start": "2024-09-17T11:00:00Z",
-        "end": "2024-09-17T13:00:00Z",
-        "location": "Room 603"
-      },
-      {
-        "lectureNumber": 4,
-        "subject": "Vulnerability Management",
-        "start": "2024-09-19T11:00:00Z",
-        "end": "2024-09-19T13:00:00Z",
-        "location": "Room 604"
-      }
-    ]
+    ],
+    "registrationLink": "https://example.com/register-algo101"
   }
 ]
