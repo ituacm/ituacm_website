@@ -1,9 +1,5 @@
 import "./App.css";
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import EventsPage from "./pages/EventsPage/EventsPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
@@ -17,6 +13,9 @@ import { coursesLoader } from "./loaders/coursesLoader";
 import { calendarLoader } from "./loaders/calendarLoader";
 import { homeLoader } from "./loaders/homeLoader";
 import NotFoundPage from "./pages/404Page/NotFoundPage";
+import AdminRedirect from "./pages/AdminRedirect/AdminRedirect";
+import AdminLogin from "./components/AdminLogin/AdminLogin";
+import AdminDashboard from "./components/AdminDashboard/AdminDashboard";
 
 function App() {
   const router = createBrowserRouter([
@@ -30,6 +29,17 @@ function App() {
         { path: "about", element: <AboutPage />, loader: boardMembersLoader },
         { path: "courses", element: <CoursesPage />, loader: coursesLoader },
         { path: "calendar", element: <CalendarPage />, loader: calendarLoader },
+        {
+          path: "admin",
+          element: <AdminRedirect />,
+          children: [
+            {
+              path: "dashboard",
+              element: <AdminDashboard />,
+            },
+            { path: "login", element: <AdminLogin /> },
+          ],
+        },
         { path: "*", element: <NotFoundPage /> },
       ],
     },
