@@ -27,7 +27,7 @@ function Courses({
 
   const [searchParams] = useSearchParams();
   const modalCourse = courses.find(
-    (course) => course.id.toString() === searchParams.get("id")
+    (course) => course._id === searchParams.get("id")
   );
 
   useEffect(() => {

@@ -35,7 +35,7 @@ function CourseCard({ course }) {
 
   const navigate = useNavigate();
   function createSearchQuery() {
-    navigate(`/courses?id=${course.id}`);
+    navigate(`/courses?id=${course._id}`);
   }
 
   function weekDiffFromToday(date) {

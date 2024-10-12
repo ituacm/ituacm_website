@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 function EventCard({ event, page }) {
   const navigate = useNavigate();
   function createSearchQuery() {
-    navigate(`/${page}?id=${event.courseId ? event.courseId : event.id}`);
+    navigate(`/${page}?id=${event.courseId ? event.courseId : event._id}`);
   }
   function weekDiffFromToday(date) {
     const today = new Date();

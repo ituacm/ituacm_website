@@ -24,7 +24,7 @@ function Events({
 
   const [searchParams] = useSearchParams();
   const modalEvent = events.find(
-    (event) => event.id.toString() === searchParams.get("id")
+    (event) => event._id === searchParams.get("id")
   );
 
   useEffect(() => {
