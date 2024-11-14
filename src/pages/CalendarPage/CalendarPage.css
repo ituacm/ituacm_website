@@ -1,5 +1,5 @@
-.calendar-page-container{
-    display:flex;
+.calendar-page-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
