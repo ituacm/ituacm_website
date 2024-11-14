@@ -14,8 +14,8 @@ import PixeryLogo from "../../assets/pixery-white-logo.png";
 
 function Sponsors() {
     return (
-        <div class="sponsors-container">
-            <div class="logos-slide">
+        <div className="sponsors-container">
+            <div className="logos-slide">
                 <img src={BtcTurkLogo} alt="BTC Türk" />
                 <img src={SoftTechLogo} alt="Soft Tech" />
                 <img src={TurkishAerospaceLogo} alt="Turkish Aerospace" />
@@ -29,7 +29,7 @@ function Sponsors() {
                 <img src={PixeryLogo} alt="Pixery" />
             </div>
 
-            <div class="logos-slide">
+            <div className="logos-slide">
                 <img src={BtcTurkLogo} alt="BTC Türk" />
                 <img src={SoftTechLogo} alt="Soft Tech" />
                 <img src={TurkishAerospaceLogo} alt="Turkish Aerospace" />

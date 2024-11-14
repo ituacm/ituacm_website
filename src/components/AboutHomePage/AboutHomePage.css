@@ -73,12 +73,11 @@
     & .overlay {
         opacity: 1;
     }
-}
 
-
-.scrolled .header,
-.scrolled .paragraph,
-.scrolled .learn-more {
-    transform: translateX(0);
-    opacity: 1;
+    & .header,
+    & .paragraph,
+    & .learn-more {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
