@@ -1,6 +1,7 @@
-.footer-container{
+.footer-container {
     width: 100%;
 }
+
 .footer {
     display: flex;
     align-items: center;
@@ -25,19 +26,21 @@
     padding: 20px;
     border-right: solid 1px white;
 }
-.footer-img{
+
+.footer-img {
     display: flex;
     align-items: center;
     height: 9rem;
-}
-.footer-img img {
-    margin: 20px;
-    width: 100px;
-    transition: 0.2s;
-}
 
-.footer-img img:hover {
-    transform: scale(1.05);
+    & img {
+        margin: 20px;
+        width: 100px;
+        transition: 0.2s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
 }
 
 #acmWhite {
@@ -49,7 +52,6 @@
     margin-bottom: 35px;
 }
 
-
 .footer-right {
     width: 100%;
     align-items: center;
@@ -58,7 +60,7 @@
     flex-direction: column;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,19 +71,18 @@
     height: auto;
     display: flex;
     justify-content: center;
-}
 
+    & a i {
+        font-size: 1.7rem;
+        margin: 0px 20px 0px 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        color: white;
 
-.footer-icons a i {
-    font-size: 1.7rem;
-    margin: 0px 20px 0px 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    color: white;
-}
-
-.footer-icons i:hover {
-    transform: scale(1.1);
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
 }
 
 .footer-bottom {
@@ -94,39 +95,33 @@
     width: 100%;
     color: white;
     font-size: 13px;
+
+    & p {
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 }
 
-
-.footer-bottom p {
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 @keyframes scroll-text {
-    from {
-        left: 100%;
-    }
-
-    to {
-        left: -100%;
-    }
+    from { left: 100%; }
+    to { left: -100%; }
 }
 
+
 @media (max-width: 900px) {
-
-
     .footer {
         flex-direction: column;
         font-size: 10px;
-    }
 
-    .footer-img img {
-        margin: 20px;
-        width: 63px;
-        transition: 0.2s;
+        & img {
+            margin: 20px;
+            width: 63px;
+            transition: 0.2s;
+        }
     }
 
     #acmWhite {
@@ -152,7 +147,8 @@
         font-size: 8px;
     }
 }
-@media(max-width:450px){
+
+@media (max-width: 450px) {
     .footer-icons a i {
         font-size: 1.5rem;
     }
