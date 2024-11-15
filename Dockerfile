@@ -15,6 +15,7 @@ COPY . .
 
 # Build the app for production
 RUN npm run build
+RUN npm run build:css
 
 # Start the application using serve (you can add it as a dependency)
 CMD ["npx", "serve", "-s", "build", "-l", "80"]
