@@ -1,5 +1,3 @@
-
-
 .stats-container {
     display: flex;
     flex-direction: column;
@@ -18,7 +16,6 @@
     flex-wrap: nowrap; 
 }
 
-
 .stat {
     display: flex;
     align-items: center;
@@ -33,12 +30,11 @@
     overflow: hidden;
     transition: transform 0.3s ease, background-color 0.3s ease;
     justify-content: center;
-}
 
-
-.stat:hover {
-    transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.2);
+    &:hover {
+        transform: scale(1.05);
+        background-color: rgba(255, 255, 255, 0.2);
+    }
 }
 
 .stat-icon {
@@ -56,48 +52,47 @@
     .stats {
         width: 95%;
     }
+
     .stat {
         width: 100%;
         align-items: center;
     }
-    .stat-detail{ 
+
+    .stat-detail { 
         font-size: 1.2rem;
     }
-
-
-    
-
 }
 
 @media (max-width: 930px) {
     .stats {
         width: 100%;
-        
         align-items: center;
     }
-    .stat-detail{ font-size: 1.2rem;}
+
+    .stat-detail { font-size: 1.2rem;}
 }
+
 @media (max-width: 880px) {
-    .stat-detail{ font-size: 1rem;}
-    .stat-icon{font-size: 1.5rem;}
+    .stat-detail { font-size: 1rem; }
+    .stat-icon { font-size: 1.5rem; }
 }
 
 @media (max-width: 755px) {
-    .stat-detail{ font-size: 1rem;}
-    .stat-icon{font-size: 1rem;}
+    .stat-detail { font-size: 1rem; }
+    .stat-icon { font-size: 1rem; }
 }
 
 @media (max-width: 635px) {
-    .stat-detail{ font-size: 0.7rem;}
-    .stat-icon{font-size: 0.7rem;}
+    .stat-detail { font-size: 0.7rem; }
+    .stat-icon { font-size: 0.7rem; }
 }
 
 @media (max-width: 470px) {
-    .stat-detail{ font-size: 0.5rem;font-weight: 600;}
-    .stat-icon{font-size: 0.6rem;}
+    .stat-detail { font-size: 0.5rem;font-weight: 600; }
+    .stat-icon { font-size: 0.6rem; }
 }
 
 @media (max-width: 360px) {
-    .stat-detail{ font-size: 0.4rem;font-weight: 600;}
-    .stat-icon{font-size: 0.5rem;}
+    .stat-detail { font-size: 0.4rem;font-weight: 600; }
+    .stat-icon { font-size: 0.5rem; }
 }

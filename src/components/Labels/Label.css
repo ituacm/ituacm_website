@@ -4,7 +4,8 @@
     font-size: 0.7rem;
     font-weight: 500;
 }
-@media(width<550px){
+
+@media (width < 550px){
     .label{
         font-size: 0.5rem;
     }

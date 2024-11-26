@@ -37,11 +37,11 @@
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    align-items: center
-}
+    align-items: center;
 
-.board-member-social a {
-    text-decoration: none;
+    & a {
+        text-decoration: none;
+    }
 }
 
 .board-member-icon {
@@ -49,35 +49,37 @@
     transition: all 0.1s ease-in-out;
     font-size: 1.5rem;
     cursor: pointer;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
 }
 
-.board-member-icon:hover {
-    transform: translateY(-5px);
-}
-.board-member-show-copied{
+.board-member-show-copied {
     position:fixed;
     right: 1rem;
-    bottom:1rem;
+    bottom: 1rem;
     background-color: var(--primary-color);
     padding: 1rem;
     border-radius: 0.5rem;
-    color:#ffffff
+    color: #ffffff
 }
 
-@media(width<550px){
+
+@media (width < 550px){
     .board-member-name {
         font-size: 1rem;
     }
-    .board-member-role{
+    .board-member-role {
         font-size: 0.8rem;
     }
-    .board-member img{
+    .board-member img {
         height: 75%;
     }
-    .board-member-info{
+    .board-member-info {
         height: 25%;
     }
-    .board-member-icon{
+    .board-member-icon {
         font-size: 1rem;
     }
 }
