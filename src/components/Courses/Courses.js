@@ -39,42 +39,39 @@ function Courses({
     courses.sort(sort).filter(filter)
   );
 
-  return (
-    <>
-      <div className="courses-container">
-        <div className="courses">
-          {header ? <h1 className="courses-header">{header}</h1> : null}
-          <div className="courses-list">
-            {!visible
-              ? listingCourses.map((course, index) => {
-                  return (
-                    <div key={index} className="course">
-                      <CourseCard course={course} page={"courses"} />
-                    </div>
-                  );
-                })
-              : listingCourses.slice(0, visibleCourses).map((course, index) => {
-                  return (
-                    <div key={index} className="course">
-                      <CourseCard course={course} page={"courses"} />
-                    </div>
-                  );
-                })}
-          </div>
-          {visible && listingCourses.length > visible ? (
-            <button
-              className="primary-button courses-show-button"
-              onClick={toggleShowMoreCourses}
-            >
-              {showMore ? "Show Less" : "Show More"}
-            </button>
-          ) : null}
+  return listingCourses.length ? (
+    <div className="courses-container">
+      <div className="courses">
+        {header ? <h1 className="courses-header">{header}</h1> : null}
+        <div className="courses-list">
+          {!visible
+            ? listingCourses.map((course, index) => {
+                return (
+                  <div key={index} className="course">
+                    <CourseCard course={course} page={"courses"} />
+                  </div>
+                );
+              })
+            : listingCourses.slice(0, visibleCourses).map((course, index) => {
+                return (
+                  <div key={index} className="course">
+                    <CourseCard course={course} page={"courses"} />
+                  </div>
+                );
+              })}
         </div>
+        {visible && listingCourses.length > visible ? (
+          <button
+            className="primary-button courses-show-button"
+            onClick={toggleShowMoreCourses}
+          >
+            {showMore ? "Show Less" : "Show More"}
+          </button>
+        ) : null}
       </div>
-
       {modalCourse && <CourseModal course={modalCourse} />}
-    </>
-  );
+    </div>
+  ) : null;
 }
 
 export default Courses;

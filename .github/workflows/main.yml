@@ -1,18 +1,29 @@
-name: Node.js CI
+name: Node.js CI/CD
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
-  build:
-
-    runs-on: self-hosted
+  deploy:
+    runs-on:
+      - self-hosted
     steps:
-    - uses: actions/checkout@v2
+      # Check out the repository
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - run: docker stop ft
-    - run: docker build -t ituacm-ft .
-    - run: docker run -p --name ft 3000:3000 ituacm-ft
+      # Stop and remove existing containers (if any)
+      - name: Stop existing containers
+        run: |
+          docker compose -f docker-compose.yml down
+
+      # Build the Docker containers with no cache to ensure latest changes
+      - name: Build Docker containers
+        run: |
+          docker compose -f docker-compose.yml build --no-cache
+
+      # Start up the containers in detached mode
+      - name: Deploy updated containers
+        run: |
+          docker compose -f docker-compose.yml up -d

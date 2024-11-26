@@ -48,10 +48,20 @@
     color: #000;
     transition: all 0.1s ease-in-out;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .board-member-icon:hover {
     transform: translateY(-5px);
+}
+.board-member-show-copied{
+    position:fixed;
+    right: 1rem;
+    bottom:1rem;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color:#ffffff
 }
 
 @media(width<550px){

@@ -16,6 +16,7 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import { coursesLoader } from "./loaders/coursesLoader";
 import { calendarLoader } from "./loaders/calendarLoader";
 import { homeLoader } from "./loaders/homeLoader";
+import NotFoundPage from "./pages/404Page/NotFoundPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -29,6 +30,7 @@ function App() {
         { path: "about", element: <AboutPage />, loader: boardMembersLoader },
         { path: "courses", element: <CoursesPage />, loader: coursesLoader },
         { path: "calendar", element: <CalendarPage />, loader: calendarLoader },
+        { path: "*", element: <NotFoundPage /> },
       ],
     },
   ]);

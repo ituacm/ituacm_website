@@ -4,7 +4,7 @@
 
 :root {
   --primary-color:#0085ca;
-  --accent-color:#002f6c 
+  --accent-color:#002f6c;
 }
 
 *{
@@ -38,7 +38,7 @@ h1{
 }
 
 .display-none{
-  display: none;
+  display: none !important;
 }
 
 body {

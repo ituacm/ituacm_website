@@ -3,6 +3,7 @@ import "../Footer/Footer.css";
 import whiteAcm from "../../assets/acm-white.png";
 import acmWhite from "../../assets/ituacm-white.png";
 import ituWhite from "../../assets/itu-white.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -25,13 +26,9 @@ function Footer() {
             >
               <img src={whiteAcm} id="acmWhite" alt="ACM Logo" />
             </a>
-            <a
-              href="https://example.com/ituacm-white"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link to={"https://ituacm.com"}>
               <img src={acmWhite} alt="ACM White" />{" "}
-            </a>
+            </Link>
           </div>
         </div>
 
