@@ -1,4 +1,3 @@
-
 # Proje Yönetimi ve Git Yönergesi
 
 Öncelikle proje yönetimi için bir “Github Projects” oluşturduk. Süreç boyunca taskları herkese oradan atayacağız. MVP sürecinde çalışacak olan herkese bu projeye ve repoya erişim yetkisi verdim. Taskları yarın (pazartesi) atamaya başlayacağız ve bitirdikçe müsaitlik durumunuza ve isteğinize göre yeniden atayacağız.
