@@ -7,10 +7,10 @@ export const checkAuth = async () => {
       null,
       { withCredentials: true }
     );
-    console.log("user is authenticated. Status: " + response.status);
+    console.log("user is authenticated.");
     return true;
   } catch (error) {
-    console.log("user is not authenticated. Status: " + error.response.status);
+    console.log("user is not authenticated.");
     return false;
   }
 };
@@ -22,14 +22,9 @@ export const login = async (username, password) => {
       { username: username, password: password },
       { withCredentials: true }
     );
-    console.log("user logged in. Status: " + response.status);
+    console.log("user logged in.");
   } catch (error) {
-    console.log(
-      "user login failed. Status: " +
-        error.response.status +
-        "\n Error: " +
-        error.response.data.message
-    );
+    console.log("user login failed.");
   }
 };
 
@@ -40,13 +35,8 @@ export const logout = async () => {
       null,
       { withCredentials: true }
     );
-    console.log("user logged out. Status: " + response.status);
+    console.log("user logged out.");
   } catch (error) {
-    console.log(
-      "user logout failed. Status: " +
-        error.response.status +
-        "\n Error: " +
-        error.response.data.message
-    );
+    console.log("user logout failed.");
   }
 };

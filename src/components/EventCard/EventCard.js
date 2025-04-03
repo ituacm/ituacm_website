@@ -62,7 +62,10 @@ function EventCard({ event, page }) {
             }
           })()}
         </div>
-        <img src={event.image} className="eventcard-image" />
+        <img
+          src={`http://localhost:8080/media/${event.image}`}
+          className="eventcard-image"
+        />
         <div className="eventcard-detail">
           <div className="eventcard-labels">
             {(() => {

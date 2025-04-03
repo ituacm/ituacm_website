@@ -16,6 +16,10 @@ import NotFoundPage from "./pages/404Page/NotFoundPage";
 import AdminRedirect from "./pages/AdminRedirect/AdminRedirect";
 import AdminLogin from "./components/AdminLogin/AdminLogin";
 import AdminDashboard from "./components/AdminDashboard/AdminDashboard";
+import BoardMembersDashboard from "./components/BoardMembersDashboard/BoardMembersDashboard";
+import CoursesDashboard from "./components/CoursesDashboard/CoursesDashboard";
+import EventsDashboard from "./components/EventsDashboard/EventsDashboard";
+import EventDashboard from "./components/EventDashboard/EventDashboard";
 
 function App() {
   const router = createBrowserRouter([
@@ -36,6 +40,23 @@ function App() {
             {
               path: "dashboard",
               element: <AdminDashboard />,
+            },
+            {
+              path: "dashboard/events",
+              element: <EventsDashboard />,
+              loader: eventsLoader,
+            },
+            {
+              path: "dashboard/events/:eventId",
+              element: <EventDashboard />,
+            },
+            {
+              path: "dashboard/courses",
+              element: <CoursesDashboard />,
+            },
+            {
+              path: "dashboard/board-members",
+              element: <BoardMembersDashboard />,
             },
             { path: "login", element: <AdminLogin /> },
           ],

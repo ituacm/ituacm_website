@@ -5,10 +5,10 @@ import { useSearchParams } from "react-router-dom";
 import EventModal from "../Modals/EventModal/EventModal";
 
 function Events({
-  events,
+  events = [],
   header = "",
   filter = () => true,
-  sort = null,
+  sort = undefined,
   visible = 0,
 }) {
   const [visibleEvents, setVisibleEvents] = useState(visible);
