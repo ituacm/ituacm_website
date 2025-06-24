@@ -64,7 +64,7 @@ Format: `docs/<update-description>`
 
 Yerel branch’inizde yaptığınız değişiklikleri repoya kaydetmek için `git push -u origin <branch-name>` komutunu kullanabilirsiniz. Bu komuttaki -u flag’i gelecekteki push komutlarının direkt belirttiğiniz repoya yapılmasını sağlar. Dolayısıyla aynı branch’e yapacağınız sonraki push’ları sadece `git push` komutuyla yapabilirsiniz. Burada asla main branch’e push yapmamanız önemli. Main branch’i sadece sürecin sonunda uygulamanın bitmiş halini içerecek.
 
-### 5- Pull Request Oluşturma
+### 5- Pull Request (PR) Oluşturma
 
 Branch'inizdeki değişiklikler tamamlandığında, bu değişiklikleri develop branch'ine merge etmek için bir Pull Request (PR) oluşturun.
 
