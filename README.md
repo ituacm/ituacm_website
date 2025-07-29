@@ -54,7 +54,7 @@ Format: `hotfix/<conflict-description>`
 
 Format: `docs/<update-description>`
 
-Örnek: `docs/update-readme`, `docs/api-documentation`
+Örnek: `docs/update-readme`, `docs/api-documentation` 
 
 ### 3- Branch’te Değişiklik Yapma ve Commit Etme
 
