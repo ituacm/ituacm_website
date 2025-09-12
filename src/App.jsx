@@ -1,8 +1,5 @@
 import "./App.css";
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import EventsPage from "./pages/EventsPage/EventsPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
@@ -18,27 +15,27 @@ import { homeLoader } from "./loaders/homeLoader";
 import NotFoundPage from "./pages/404Page/NotFoundPage";
 
 function App() {
-    const router = createBrowserRouter([
-        {
-            path: "/",
-            element: <Layout />,
-            children: [
-                { path: "", element: <HomePage />, loader: homeLoader },
-                { path: "events", element: <EventsPage />, loader: eventsLoader },
-                { path: "contact", element: <ContactPage /> },
-                { path: "about", element: <AboutPage />, loader: boardMembersLoader },
-                { path: "courses", element: <CoursesPage />, loader: coursesLoader },
-                { path: "calendar", element: <CalendarPage />, loader: calendarLoader },
-                { path: "*", element: <NotFoundPage /> },
-            ],
-        },
-    ]);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        { path: "", element: <HomePage />, loader: homeLoader },
+        { path: "events", element: <EventsPage />, loader: eventsLoader },
+        { path: "contact", element: <ContactPage /> },
+        { path: "about", element: <AboutPage />, loader: boardMembersLoader },
+        { path: "courses", element: <CoursesPage />, loader: coursesLoader },
+        { path: "calendar", element: <CalendarPage />, loader: calendarLoader },
+        { path: "*", element: <NotFoundPage /> },
+      ],
+    },
+  ]);
 
-    return (
-        <div className="App">
-            <RouterProvider router={router} />
-        </div>
-    );
+  return (
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
 export default App;
