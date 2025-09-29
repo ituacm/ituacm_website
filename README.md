@@ -101,5 +101,5 @@ GitHub’daki repoda var olan başka bir branch’te çalışmaya için öncelik
 - **Branch İsimlendirmeleri:** Yukarıda belirtilen branch isimlendirme kurallarına uyun.
 - **Merge Çatışmaları:** Merge çatışmaları durumunda, çözümden önce takım liderine haber verin.
 
-`git branch -r` ile GitHub reposunda bulunan bütün branch’leri görebilirsiniz. Sadece `git branch` yazarsanız da lokal branch’ler listelenir.
+`git branch -r` ile GitHub reposunda bulunan bütün branch’leri görebilirsiniz. Sadece `git branch` yazarsanız da lokal branch’ler listelenir
 
