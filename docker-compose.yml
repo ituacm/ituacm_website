@@ -2,7 +2,7 @@ services:
   app:
     image: ituacm_website:latest
     labels:
-      - traefik.enable=true
+      - traefik.enable=false
       - traefik.docker.network=traefik-public
       - traefik.constraint-label=traefik-public
 
